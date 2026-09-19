@@ -1,29 +1,45 @@
-(() => {
-  const pages = [...document.querySelectorAll('.sheet')];
-  const nav = [...document.querySelectorAll('nav [data-project]')];
-  document.documentElement.classList.add('js');
-  document.querySelectorAll('video').forEach(video => {
-    video.closest('figure').style.setProperty('--poster', `url("${video.getAttribute('poster')}")`);
-  });
-  let pending = false;
-  function updateActiveProject() {
-    pending = false;
-    const readingLine = Math.min(window.innerHeight * 0.3, 250);
-    const active = pages.filter(page => page.getBoundingClientRect().top <= readingLine).at(-1) || pages[0];
-    nav.forEach(a => {
-      if (a.dataset.project === active.dataset.project) a.setAttribute('aria-current', 'location');
-      else a.removeAttribute('aria-current');
+document.addEventListener("DOMContentLoaded", () => {
+  // Print handler
+  const printBtn = document.getElementById("print");
+  if (printBtn) {
+    printBtn.addEventListener("click", () => window.print());
+  }
+
+  // Active navigation tracking
+  const sections = document.querySelectorAll("section[id], article[id]");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  const observerOptions = {
+    root: null,
+    rootMargin: "-20% 0px -70% 0px",
+    threshold: 0
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute("id");
+        navLinks.forEach((link) => {
+          if (link.getAttribute("href") === `#${id}` || (id.startsWith("proj-") && link.getAttribute("href") === "#projects")) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
+        });
+      }
     });
-    const activeLink = nav.find(a => a.dataset.project === active.dataset.project);
-    document.querySelector('.current-label').textContent = active.dataset.project === 'warehouse'
-      ? '진행 중인 프로젝트 · LOGITLE' : activeLink.querySelector('small').textContent;
-  }
-  function scheduleUpdate() {
-    if (!pending) { pending = true; requestAnimationFrame(updateActiveProject); }
-  }
-  document.querySelector('#print').addEventListener('click', () => window.print());
-  window.addEventListener('scroll', scheduleUpdate, {passive: true});
-  window.addEventListener('resize', scheduleUpdate);
-  window.addEventListener('hashchange', scheduleUpdate);
-  updateActiveProject();
-})();
+  }, observerOptions);
+
+  sections.forEach((sec) => observer.observe(sec));
+
+  // Video poster click to play
+  document.querySelectorAll("video").forEach((video) => {
+    video.addEventListener("play", () => {
+      document.querySelectorAll("video").forEach((otherVideo) => {
+        if (otherVideo !== video && !otherVideo.paused) {
+          otherVideo.pause();
+        }
+      });
+    });
+  });
+});
