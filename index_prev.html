@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="이정훈(Lee Jung-Hoon) 포트폴리오 - 자율주행 로봇 정밀 제어, 임베디드 펌웨어, 온디바이스 AI, 산업 자동화 PLC 엔지니어">
   <meta name="theme-color" content="#1d4ed8">
-  <title>이정훈 | Embedded Systems & Hardware Control Engineer</title>
+  <title>이정훈 | Robotics & Embedded Systems Engineer</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
@@ -19,24 +19,14 @@
         <span class="brand-badge">JH</span>
         <div>
           <span class="brand-name">이정훈</span>
-          <span class="brand-role"> / Embedded & Control Systems</span>
+          <span class="brand-role"> / Robotics & Embedded</span>
         </div>
       </a>
       
       <ul class="nav-menu">
         <li><a class="nav-link active" href="#profile">소개</a></li>
         <li><a class="nav-link" href="#skills">기술 역량</a></li>
-        <li class="nav-dropdown-wrapper">
-          <a class="nav-link" href="#projects">주요 프로젝트 <span class="dropdown-caret">▾</span></a>
-          <ul class="nav-dropdown-menu">
-            <li><a href="#proj-warehouse"><span class="drop-num">01</span> LOGITLE 정밀 도킹</a></li>
-            <li><a href="#proj-vip"><span class="drop-num">02</span> VIP Wearable 보행보조</a></li>
-            <li><a href="#proj-kickcan"><span class="drop-num">03</span> KICK-CAN 4WD RC카</a></li>
-            <li><a href="#proj-balance"><span class="drop-num">04</span> Balancing Robot 역진자</a></li>
-            <li><a href="#proj-stm32"><span class="drop-num">05</span> STM32 온도 제어</a></li>
-            <li><a href="#proj-plc"><span class="drop-num">06</span> PLC 자동화 물류 설비</a></li>
-          </ul>
-        </li>
+        <li><a class="nav-link" href="#projects">주요 프로젝트</a></li>
         <li><a class="nav-link" href="#experience">실무 경력</a></li>
         <li><a class="nav-link" href="#education">학력 및 자격</a></li>
       </ul>
@@ -56,10 +46,10 @@
     <section class="section" id="profile">
       <div class="hero-card">
         <div class="hero-header">
-          <span class="eyebrow">EMBEDDED SYSTEMS & HARDWARE CONTROL ENGINEER</span>
+          <span class="eyebrow">ROBOTICS & EMBEDDED SYSTEMS ENGINEER</span>
           <h1 class="hero-title">
-            센서 데이터 해석부터 구동 모터 정밀 제어까지,<br>
-            소프트웨어와 하드웨어를 연결하여 신뢰할 수 있는 제어 시스템을 완성합니다.
+            센서 데이터 해석부터 모터 정밀 제어까지,<br>
+            소프트웨어로 로봇을 실제로 움직이게 만듭니다.
           </h1>
           <p class="hero-subtitle">
             "Bridging algorithms and physical actuators with precision firmware & edge intelligence."
@@ -79,19 +69,19 @@
         <div class="profile-grid">
           <div class="bio-col">
             <div class="bio-card-inner">
-              <h3 class="bio-heading">안녕하세요, 임베디드 및 하드웨어 제어 엔지니어 이정훈입니다.</h3>
+              <h3 class="bio-heading">안녕하세요, 로봇 엔지니어 이정훈입니다.</h3>
               <p class="bio-text">
-                시스템의 입력이 되는 <strong>센서(LiDAR, 카메라, IMU, 온도)</strong> 데이터를 해석하고, 이를 <strong>마이크로컨트롤러(MCU)</strong>와 <strong>구동 액추에이터</strong>로 직접 연결하여 오차 없이 구동시키는 엔지니어링을 지향합니다.
+                로봇의 눈이 되는 <strong>센서(LiDAR, 카메라, IMU)</strong> 데이터를 해석하고, 이를 <strong>마이크로컨트롤러(MCU)</strong>와 <strong>모터</strong>로 직접 연결하여 오차 없이 구동시키는 엔지니어링을 지향합니다.
               </p>
               <p class="bio-text">
-                이론적인 시뮬레이션에만 머무르지 않고, 회로 설계, 부품표(BOM) 작성, SMT 발주 및 제어 시스템 제작 실무 경험을 바탕으로 <strong>제조 현장에서 끝까지 신뢰할 수 있는 동작</strong>을 완성합니다.
+                이론적인 시뮬레이션에만 머무르지 않고, 회로 설계, 부품표(BOM) 작성, SMT 발주 및 방산 무인선 제어부 실무 경험을 바탕으로 <strong>제조 현장에서 끝까지 신뢰할 수 있는 동작</strong>을 완성합니다.
               </p>
               
               <div class="bio-strengths-compact">
                 <div class="strength-card">
                   <div class="strength-icon-box"><svg class="tech-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83" stroke="currentColor" stroke-width="2"/></svg></div>
                   <div class="strength-content">
-                    <strong>시스템 제어 및 지능형 알고리즘 (Control & Edge AI)</strong>
+                    <strong>상위 로봇 제어 (ROS 2 & AI)</strong>
                     <p>LiDAR 기반 2D ICP 정밀 도킹(오차 1.5cm 이내)과 초경량 온디바이스 AI(12+ FPS) 파이프라인 구축</p>
                   </div>
                 </div>
@@ -106,7 +96,7 @@
                   <div class="strength-icon-box"><svg class="tech-icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="7" cy="7" r="1.5" fill="currentColor"/><circle cx="17" cy="17" r="1.5" fill="currentColor"/><path d="M7 8.5v4a2 2 0 0 0 2 2h6a2 2 0 0 1 2 2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></div>
                   <div class="strength-content">
                     <strong>하드웨어 이해 & 현장 감각 (HW & SMT)</strong>
-                    <p>PCB 아트워크(KiCAD), 3D 기구물 모델링, 펌웨어 개발 및 제어기 제작 실무(BOM·외주 관리) 경험 보유</p>
+                    <p>PCB 아트워크(KiCAD), 3D 기구물 모델링, 방산 USV 제어부 실무(BOM·외주 관리) 경험 보유</p>
                   </div>
                 </div>
               </div>
@@ -115,46 +105,41 @@
 
           <div class="contact-col">
             <div class="contact-box">
-              <div class="contact-header-centered">
-                <div class="profile-photo-wrapper-lg">
+              <div class="contact-header">
+                <div class="profile-photo-wrapper">
                   <img src="assets/profile.jpg" alt="이정훈 증명사진" class="profile-photo">
                 </div>
-                <div class="profile-header-info-centered">
-                  <h3 class="profile-name">이정훈 <span class="profile-name-en">Lee Jung-Hoon</span></h3>
-                  <span class="profile-title">Embedded Systems & Hardware Engineer</span>
-                  <span class="profile-univ">국립한국교통대학교 전자공학과 졸업</span>
-                  <span class="profile-badge-pill">임베디드 펌웨어 · 제어 시스템</span>
+                <div class="profile-header-info">
+                  <span class="profile-name">이정훈</span>
+                  <span class="profile-title">Robotics & Embedded Engineer</span>
+                  <span class="profile-status">국립한국교통대 전자공학 학사 (4.15 / 4.5)</span>
                 </div>
               </div>
               
               <ul class="contact-list">
+                <li><strong>성명</strong> <span>이정훈 (Lee Jung-Hoon)</span></li>
                 <li><strong>이메일</strong> <a href="mailto:dl1wjd2@gmail.com">dl1wjd2@gmail.com</a></li>
                 <li><strong>GitHub</strong> <a href="https://github.com/jhleedev00" target="_blank" rel="noopener noreferrer">github.com/jhleedev00</a></li>
-                <li><strong>국가 자격</strong> <span>정보처리기사 · 정보통신기술자(초급)</span></li>
-                <li><strong>병역 사항</strong> <span>육군 병장 만기제대 (MW 통신운용)</span></li>
-                <li><strong>전문 분야</strong> <span>임베디드 펌웨어 · 제어 SW 엔지니어</span></li>
+                <li><strong>자격</strong> <span>정보처리기사 | 정보통신기술자(초급)</span></li>
+                <li><strong>병역</strong> <span>육군 병장 만기제대 (MW 통신운용병)</span></li>
               </ul>
 
-              <!-- GPA Highlight Card (학부 성적 우수) -->
-              <div class="gpa-card">
-                <div class="gpa-card-header">
-                  <div class="gpa-label-wrap">
-                    <span class="gpa-badge">🎓 학부 성적 우수</span>
-                    <span class="gpa-sub-label">전자공학심화 전공</span>
-                  </div>
-                  <div class="gpa-score-wrap">
-                    <span class="gpa-score">4.15</span>
-                    <span class="gpa-max">/ 4.5</span>
-                  </div>
+              <div class="stat-grid">
+                <div class="stat-box">
+                  <span class="stat-value">4.15</span>
+                  <span class="stat-label">학부 평점 ( / 4.5)</span>
                 </div>
-
-                <div class="gpa-progress-bar" title="학부 평점 달성률 92.2%">
-                  <div class="gpa-progress-fill" style="width: 92.2%;"></div>
+                <div class="stat-box">
+                  <span class="stat-value">1.5cm</span>
+                  <span class="stat-label">LiDAR 정밀 도킹 오차</span>
                 </div>
-
-                <div class="gpa-card-footer">
-                  <span class="gpa-tag">환산 96점 (상위 3%)</span>
-                  <span class="gpa-tag-sub">성적우수 장학생 다수 수혜</span>
+                <div class="stat-box">
+                  <span class="stat-value">4대 통신</span>
+                  <span class="stat-label">단일 MCU 충돌 없는 통합</span>
+                </div>
+                <div class="stat-box">
+                  <span class="stat-value">6개</span>
+                  <span class="stat-label">완결 하드웨어 프로젝트</span>
                 </div>
               </div>
             </div>
@@ -353,36 +338,8 @@
         <span class="eyebrow">PORTFOLIO WORK</span>
         <h2 class="section-title">주요 엔지니어링 프로젝트</h2>
         <p class="section-desc">
-          문제를 정의하고, 하드웨어와 소프트웨어를 직접 연결하여 실측 검증까지 완료한 6대 핵심 프로젝트입니다. 아래 바로가기 버튼을 통해 각 프로젝트 상세 위치로 즉시 이동할 수 있습니다.
+          문제를 정의하고, 하드웨어와 소프트웨어를 직접 연결하여 실측 검증까지 완료한 6대 핵심 프로젝트입니다.
         </p>
-
-        <!-- Project Quick Jump Navigation -->
-        <div class="project-quick-nav" aria-label="프로젝트 빠른 이동">
-          <a href="#proj-warehouse" class="proj-nav-pill">
-            <span class="pill-badge">01</span>
-            <span class="pill-title">LOGITLE 정밀 도킹</span>
-          </a>
-          <a href="#proj-vip" class="proj-nav-pill">
-            <span class="pill-badge">02</span>
-            <span class="pill-title">VIP Wearable 보행보조</span>
-          </a>
-          <a href="#proj-kickcan" class="proj-nav-pill">
-            <span class="pill-badge">03</span>
-            <span class="pill-title">KICK-CAN 4WD RC카</span>
-          </a>
-          <a href="#proj-balance" class="proj-nav-pill">
-            <span class="pill-badge">04</span>
-            <span class="pill-title">Balancing Robot 역진자</span>
-          </a>
-          <a href="#proj-stm32" class="proj-nav-pill">
-            <span class="pill-badge">05</span>
-            <span class="pill-title">STM32 온도 제어</span>
-          </a>
-          <a href="#proj-plc" class="proj-nav-pill">
-            <span class="pill-badge">06</span>
-            <span class="pill-title">PLC 자동화 설비</span>
-          </a>
-        </div>
       </div>
 
       <!-- Project 1 -->
@@ -393,7 +350,6 @@
             <span class="project-period">자율주행 물류 로봇 / ROS 2 Jazzy</span>
             <span class="project-status status-active">완료 및 고도화</span>
           </div>
-          <a href="#projects" class="project-jump-top-btn" title="프로젝트 목록으로 이동">목록 ↑</a>
           <div class="metric-strip">
             <span class="metric-badge"><svg class="tech-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83" stroke="currentColor" stroke-width="2"/></svg> 20Hz 제어 루프</span>
             <span class="metric-badge"><svg class="tech-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2" fill="currentColor"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m12.72-4.24a12 12 0 0 1 0 16.98m-16.96 0a12 12 0 0 1 0-16.98" fill="none" stroke="currentColor" stroke-width="2"/></svg> 오차 1.5cm 이내</span>
@@ -473,7 +429,6 @@
             <span class="project-period">제24회 임베디드SW경진대회 출품 / 팀 프로젝트</span>
             <span class="project-status status-active">본선 출품 완료</span>
           </div>
-          <a href="#projects" class="project-jump-top-btn" title="프로젝트 목록으로 이동">목록 ↑</a>
           <div class="metric-strip">
             <span class="metric-badge"><svg class="tech-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" fill="currentColor"/><circle cx="5" cy="7" r="2" fill="currentColor"/><circle cx="19" cy="7" r="2" fill="currentColor"/><circle cx="5" cy="17" r="2" fill="currentColor"/><circle cx="19" cy="17" r="2" fill="currentColor"/><line x1="7" y1="8" x2="10" y2="11" stroke="currentColor" stroke-width="1.5"/><line x1="17" y1="8" x2="14" y2="11" stroke="currentColor" stroke-width="1.5"/><line x1="7" y1="16" x2="10" y2="13" stroke="currentColor" stroke-width="1.5"/><line x1="17" y1="16" x2="14" y2="13" stroke="currentColor" stroke-width="1.5"/></svg> 12+ FPS 실시간 비전</span>
             <span class="metric-badge"><svg class="tech-icon" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="8" y="8" width="8" height="8" fill="currentColor"/><path d="M9 1v3m6-3v3M9 20v3m6-3v3M1 9h3m-3 6h3M20 9h3m-3 6h3" stroke="currentColor" stroke-width="2"/></svg> LiteRT INT8 양자화</span>
@@ -562,7 +517,6 @@
             <span class="project-period">임베디드 분산 통신 제어 / 4인 팀 프로젝트</span>
             <span class="project-status status-active">완료 및 주행 검증</span>
           </div>
-          <a href="#projects" class="project-jump-top-btn" title="프로젝트 목록으로 이동">목록 ↑</a>
           <div class="metric-strip">
             <span class="metric-badge"><svg class="tech-icon" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><line x1="2" y1="10" x2="22" y2="10" stroke="currentColor" stroke-width="2"/><circle cx="7" cy="15" r="1.5" fill="currentColor"/><circle cx="17" cy="15" r="1.5" fill="currentColor"/></svg> FDCAN 다중 통신</span>
             <span class="metric-badge"><svg class="tech-icon" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="8" y="8" width="8" height="8" fill="currentColor"/><path d="M9 1v3m6-3v3M9 20v3m6-3v3M1 9h3m-3 6h3M20 9h3m-3 6h3" stroke="currentColor" stroke-width="2"/></svg> STM32 펌웨어</span>
@@ -650,7 +604,6 @@
             <span class="project-period">센서 퓨전 & 역진자 제어 / 1인 전담 하드웨어</span>
             <span class="project-status status-active">완료 및 주행 검증</span>
           </div>
-          <a href="#projects" class="project-jump-top-btn" title="프로젝트 목록으로 이동">목록 ↑</a>
           <div class="metric-strip">
             <span class="metric-badge"><svg class="tech-icon" viewBox="0 0 24 24"><path d="M2 12c3-8 5-8 8 0s5 8 8 0 3-8 4-4" fill="none" stroke="currentColor" stroke-width="2"/></svg> 이중 PID 제어기</span>
             <span class="metric-badge"><svg class="tech-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2" fill="currentColor"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m12.72-4.24a12 12 0 0 1 0 16.98m-16.96 0a12 12 0 0 1 0-16.98" fill="none" stroke="currentColor" stroke-width="2"/></svg> 1D 칼만 필터</span>
@@ -739,7 +692,6 @@
             <span class="project-period">학부 졸업작품 / 1인 전담 개발</span>
             <span class="project-status status-active">완료 및 최우수 통과</span>
           </div>
-          <a href="#projects" class="project-jump-top-btn" title="프로젝트 목록으로 이동">목록 ↑</a>
           <div class="metric-strip">
             <span class="metric-badge"><svg class="tech-icon" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="8" y="8" width="8" height="8" fill="currentColor"/><path d="M9 1v3m6-3v3M9 20v3m6-3v3M1 9h3m-3 6h3M20 9h3m-3 6h3" stroke="currentColor" stroke-width="2"/></svg> STM32F407 펌웨어</span>
             <span class="metric-badge"><svg class="tech-icon" viewBox="0 0 24 24"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="11.5" cy="17.5" r="2" fill="currentColor"/></svg> 제어 오차 ±1.5℃</span>
@@ -838,7 +790,6 @@
             <span class="project-period">스마트 팩토리 산업 자동화 / 팀 프로젝트</span>
             <span class="project-status status-active">완료 및 시연 완료</span>
           </div>
-          <a href="#projects" class="project-jump-top-btn" title="프로젝트 목록으로 이동">목록 ↑</a>
           <div class="metric-strip">
             <span class="metric-badge"><svg class="tech-icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><line x1="7" y1="8" x2="7" y2="16" stroke="currentColor" stroke-width="2"/><line x1="17" y1="8" x2="17" y2="16" stroke="currentColor" stroke-width="2"/><path d="M7 10h4m2 0h4M7 14h10" stroke="currentColor" stroke-width="1.5"/></svg> LS XG5000 래더</span>
             <span class="metric-badge"><svg class="tech-icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="none" stroke="currentColor" stroke-width="2"/></svg> 안전 인터록 설계</span>
@@ -924,37 +875,21 @@
         <span class="eyebrow">CAREER & PRACTICE</span>
         <h2 class="section-title">실무 경력</h2>
         <p class="section-desc">
-          방위산업 통신 및 전자제어 시스템 분야에서의 펌웨어 개발 및 제조 조달 실무 경험입니다.
+          방위산업 무인수상정(USV) 시스템 펌웨어 개발 및 제조 조달 실무에 참여한 경험입니다.
         </p>
       </div>
 
       <div class="experience-card">
         <div class="exp-header">
-          <div class="exp-company-group">
-            <a href="https://pwarsenal.co.kr/" target="_blank" rel="noopener noreferrer" class="exp-logo-link" title="피플웍스아스날 공식 홈페이지 바로가기">
-              <img src="https://pwarsenal.co.kr/img/common/for_kakao.png" 
-                   alt="주식회사 피플웍스아스날 로고" 
-                   class="exp-company-logo" 
-                   onerror="this.onerror=null; this.src='assets/pwarsenal-logo.svg';">
-            </a>
-            <div class="exp-company-info">
-              <div class="exp-title-row">
-                <h3 class="exp-company"><a href="https://pwarsenal.co.kr/" target="_blank" rel="noopener noreferrer" class="company-link">주식회사 피플웍스아스날</a></h3>
-                <a href="https://pwarsenal.co.kr/" target="_blank" rel="noopener noreferrer" class="exp-website-badge" title="피플웍스아스날 공식 웹사이트 열기">
-                  <span>공식 웹사이트</span> <svg class="tech-icon" viewBox="0 0 24 24" style="width:12px;height:12px;display:inline-block;vertical-align:-1px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6m4-3h6v6m-11 5L21 3" fill="none" stroke="currentColor" stroke-width="2"/></svg>
-                </a>
-              </div>
-              <div class="exp-meta-row">
-                <span class="exp-dept">3팀 연구원 (정규직)</span>
-                <span class="exp-company-sub">방위산업 무선통신 및 전자제어 시스템 전문 기업</span>
-              </div>
-            </div>
+          <div>
+            <h3 class="exp-company">주식회사 피플웍스아스날</h3>
+            <span class="exp-dept">3팀 연구원 (정규직)</span>
           </div>
           <span class="exp-period">2025.11 ~ 2026.03 (5개월)</span>
         </div>
         
         <p class="exp-desc">
-          방위산업 무선통신 및 전자제어 시스템 전문 기업인 <a href="https://pwarsenal.co.kr/" target="_blank" rel="noopener noreferrer" class="exp-inline-link"><strong>(주)피플웍스아스날</strong></a>에서 <strong>무인수상정(USV) RF 통신 제어부 펌웨어 개발</strong> 및 <strong>시제품 제작 부품(BOM) 관리·SMT 외주 조달</strong> 업무를 담당했습니다.
+          해양 방위산업 분야의 <strong>무인수상정(USV) RF 통신 제어부 펌웨어 개발</strong> 및 <strong>시제품 제작 부품(BOM) 관리·SMT 외주 조달</strong> 업무를 담당했습니다.
         </p>
 
         <div class="exp-achievements">
@@ -994,18 +929,17 @@
       </div>
 
       <div class="edu-grid">
-        <!-- Card 1: Education & Training -->
         <div class="edu-card">
-          <h3 class="edu-title">🎓 학력 및 전문 교육</h3>
+          <h3 class="edu-title">🎓 학력 사항</h3>
           <div class="edu-item">
             <strong>국립한국교통대학교 전자공학과 학사</strong>
             <span class="edu-sub">2020.03 ~ 2026.02 (학사 졸업)</span>
             <p class="edu-meta"><strong>학점: 4.15 / 4.5</strong> | 전자공학심화 전공, 성적우수 장학생 다수 수혜</p>
           </div>
           <div class="edu-item">
-            <strong>대한상공회의소 서울기술교육센터</strong>
-            <span class="edu-sub">AI융합 로봇 SW개발자 3기 과정 수료</span>
-            <p class="edu-meta">ROS 2 기반 자율주행 알고리즘, 온디바이스 AI 비전 파이프라인(LiteRT INT8), 임베디드 펌웨어 및 산업 자동화 PLC 실무 교육 이수</p>
+            <strong>Hanwha Vision VEDA 4기 부트캠프</strong>
+            <span class="edu-sub">2026.03 수료</span>
+            <p class="edu-meta">Vision's Edge Device Academy: 엣지 비전 AI 및 임베디드 리눅스 실무 교육</p>
           </div>
           <div class="edu-item">
             <strong>PADS Basic 회로 설계 과정</strong>
@@ -1014,30 +948,22 @@
           </div>
         </div>
 
-        <!-- Card 2: Qualifications & Certifications -->
         <div class="edu-card">
-          <h3 class="edu-title">📜 국가 공인 자격</h3>
+          <h3 class="edu-title">📜 국가 기술 자격 및 병역</h3>
           <div class="edu-item">
             <strong>정보처리기사</strong>
             <span class="edu-sub">한국산업인력공단 (2023.06 취득)</span>
-            <p class="edu-meta">소프트웨어 공학, 데이터베이스 설계, 자료구조·알고리즘, 시스템 아키텍처 및 네트워크 전반 지식 공인 검증</p>
+            <p class="edu-meta">소프트웨어 공학, 데이터베이스, 알고리즘, 네트워크 전반 지식 검증</p>
           </div>
           <div class="edu-item">
             <strong>정보통신기술자 경력수첩 (초급)</strong>
             <span class="edu-sub">한국정보통신공사협회 (2025.06 취득)</span>
-            <p class="edu-meta">정보통신 설비, 유무선 통신망 및 유무선 제어 네트워크 시스템 시공·감리·유지관리 법적 자격 인정</p>
+            <p class="edu-meta">정보통신 설비 및 네트워크 시스템 시공·관리 자격 인정</p>
           </div>
-        </div>
-
-        <!-- Card 3: Military Service -->
-        <div class="edu-card">
-          <h3 class="edu-title">🪖 병역 사항</h3>
           <div class="edu-item">
             <strong>대한민국 육군 병장 만기제대</strong>
             <span class="edu-sub">MW(마이크로웨이브) 통신운용병 (2021.03 ~ 2022.09)</span>
-            <p class="edu-meta">
-              격오지 고정 통신 중계소에서 마이크로웨이브(MW) 무선 전송로 및 군 전술 네트워크 통신 장비를 24시간 무중단 운용하고 전송로 품질 측정 및 신속한 장애 복구 임무를 완수했습니다.
-            </p>
+            <p class="edu-meta">고정 통신 중계소 마이크로웨이브 무선 전송로 및 네트워크 장비 무중단 운용</p>
           </div>
         </div>
       </div>

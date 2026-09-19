@@ -28,20 +28,19 @@
 | **DevOps & Collaboration** | <img src="https://img.shields.io/badge/Ubuntu_24.04_LTS-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" alt="Ubuntu Linux" height="26"> <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" height="26"> <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" height="26"> <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" height="26"> |
 
 3. **주요 엔지니어링 프로젝트 (Selected Work - 6 Projects)**
-   - [**01. LOGITLE 물류센터 LiDAR 기반 정밀 도킹 시스템**](https://jhleedev00.github.io/#proj-warehouse) (ROS 2 Jazzy, 2D ICP, 20Hz Action Server, 오차 1.5cm 이내 도킹)
-   - [**02. VIP Wearable — 시각장애인 보행 보조 시스템**](https://jhleedev00.github.io/#proj-vip) (제24회 임베디드SW경진대회 출품, Raspberry Pi 5, LiteRT INT8, 12+ FPS Zero-Copy, 1D Danger Map, STM32 햅틱 연동)
-   - [**03. KICK-CAN — CAN 기반 분산 제어 4WD RC카**](https://jhleedev00.github.io/#proj-kickcan) (STM32, FDCAN 다중 노드, 차동 구동 믹싱, 32-bit 타이머 인풋 캡처 속도 계측, RC522 RFID)
-   - [**04. Balancing Robot — 2륜 자기 평형 역진자 로봇**](https://jhleedev00.github.io/#proj-balance) (ATmega328P/STM32, MPU6050 1차원 칼만 필터 센서 퓨전, 이중 PID 제어기, KiCAD PCB 제작)
-   - [**05. STM32 기반 실시간 온도 제어 시스템**](https://jhleedev00.github.io/#proj-stm32) (학부 1인 전담 졸업작품, STM32F407, 4대 통신 버스 동시성 충돌 해결을 위한 Software Lock, 제어 오차 ±1.5℃ 이내)
-   - [**06. PLC 자동화 물류 설비 제어 미니프로젝트**](https://jhleedev00.github.io/#proj-plc) (LS ELECTRIC XG5000 래더 시퀀스, 승강기 이송 및 안전 인터록, Tact Time 최적화)
+   - **01. LOGITLE 물류센터 LiDAR 기반 정밀 도킹 시스템** (ROS 2 Jazzy, 2D ICP, 20Hz Action Server, 오차 1.5cm 이내 도킹)
+   - **02. VIP Wearable — 시각장애인 보행 보조 시스템** (제24회 임베디드SW경진대회 출품, Raspberry Pi 5, LiteRT INT8, 12+ FPS Zero-Copy, 1D Danger Map, STM32 햅틱 연동)
+   - **03. KICK-CAN — CAN 기반 분산 제어 4WD RC카** (STM32, FDCAN 다중 노드, 차동 구동 믹싱, 32-bit 타이머 인풋 캡처 속도 계측, RC522 RFID)
+   - **04. Balancing Robot — 2륜 자기 평형 역진자 로봇** (ATmega328P/STM32, MPU6050 1차원 칼만 필터 센서 퓨전, 이중 PID 제어기, KiCAD PCB 제작)
+   - **05. STM32 기반 실시간 온도 제어 시스템** (학부 1인 전담 졸업작품, STM32F407, 4대 통신 버스 동시성 충돌 해결을 위한 Software Lock, 제어 오차 ±1.5℃ 이내)
+   - **06. PLC 자동화 물류 설비 제어 미니프로젝트** (LS ELECTRIC XG5000 래더 시퀀스, 승강기 이송 및 안전 인터록, Tact Time 최적화)
 
 4. **실무 경력 (Professional Work Experience)**
-   - [**주식회사 피플웍스아스날**](https://pwarsenal.co.kr/) **— 3팀 연구원** (2025.11 ~ 2026.03 | 정규직)
-     - 방위산업 무선통신 및 전자제어 시스템 전문 기업 ([공식 웹사이트](https://pwarsenal.co.kr/))
+   - **주식회사 피플웍스아스날 — 3팀 연구원** (2025.11 ~ 2026.03 | 정규직)
      - 무인수상정(USV) RF 제어부 시스템 펌웨어 개발
      - RS-232 시리얼 통신 연동 및 가변 패킷 파서(Parser) 구현
      - I2C EEPROM 비휘발성 파라미터 관리 최적화 및 캐싱
-     - 전자 부품표(BOM) 작성, PCB 조립(SMT) 및 외주 생산 관리
+     - PLL 제어 모듈 레지스터 실시간 설정 및 신호 무결성 검증
 
 5. **학력, 자격 및 병역 (Credentials & Background)**
    - **학력**: 국립한국교통대학교 전자공학과 학사 졸업 (2020.03 ~ 2026.02, 공학사 / 전자공학심화, 평점 4.15 / 4.5)

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" width="280" height="60">
+  <defs>
+    <linearGradient id="pw-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E52528" />
+      <stop offset="100%" stop-color="#C01215" />
+    </linearGradient>
+  </defs>
+  <rect width="280" height="60" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <g transform="translate(14, 12)">
+    <rect width="36" height="36" rx="8" fill="url(#pw-grad)"/>
+    <path d="M11 10h8a5 5 0 0 1 5 5c0 2.8-2.2 5-5 5h-4v6h-4V10z" fill="#FFFFFF"/>
+    <path d="M15 14h4a1.5 1.5 0 0 1 0 3h-4v-3z" fill="#E52528"/>
+    <path d="M8 28c3.5 3 9 3 13 0" fill="none" stroke="#FDE047" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  <text x="58" y="27" font-family="'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="800" fill="#1E293B" letter-spacing="-0.5">PEOPLEWORKS</text>
+  <rect x="178" y="15" width="86" height="17" rx="4" fill="#E52528"/>
+  <text x="221" y="27" font-family="'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.8">ARSENAL</text>
+  <text x="58" y="46" font-family="'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#64748B">방위산업 무선통신·전자제어</text>
+</svg>
