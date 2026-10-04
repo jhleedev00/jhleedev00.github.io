@@ -453,17 +453,27 @@
           </div>
 
           <div class="project-media-col">
-          <div class="media-box-modern">
-            <div class="media-badge-tag">시연영상</div>
-            <video width="100%" height="auto" controls>
-              <source src="assets/logitle.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <div class="media-caption">
-              <strong>전체 시연 영상:</strong> AI 인지, 상위 서버 관제(FMS) 연동으로 이어지는 전체 물류센터 출고 지능화 영상
+            <div class="media-box-modern">
+              <div class="media-badge-tag">시연영상</div>
+              
+              <!-- 16:9 반응형 래퍼 (Google 공식 권장 referrer policy 적용) -->
+              <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;">
+                <iframe src="https://www.youtube.com/embed/TwxN1rJBxBU" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen 
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                </iframe>
+              </div>
+
+              <div class="media-caption">
+                <strong>전체 시연 영상:</strong> AI 인지, 상위 서버 관제(FMS) 연동으로 이어지는 전체 물류센터 출고 지능화 영상
+              </div>
             </div>
-          </div>
-          <div class="media-box-modern">
+
+            <div class="media-box-modern">
               <div class="media-badge-tag">시뮬레이션 맵</div>
               <img src="assets/gazebo.png" alt="LOGITLE 전체 시스템 연동 및 정밀 도킹 개념도">
               <div class="media-caption">
