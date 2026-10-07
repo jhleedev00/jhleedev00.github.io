@@ -1,0 +1,7 @@
+2026/10/08-00:10:52.012 18d8 Reusing MANIFEST C:\Users\dl1wj\OneDrive\Desktop\이력서\상공회\jhleedev00.github.io\tmp\edge-a4-profile\Default\WebStorage\2\IndexedDB\indexeddb.leveldb/MANIFEST-000001
+2026/10/08-00:10:52.013 18d8 Recovering log #3
+2026/10/08-00:10:52.015 18d8 Reusing old log C:\Users\dl1wj\OneDrive\Desktop\이력서\상공회\jhleedev00.github.io\tmp\edge-a4-profile\Default\WebStorage\2\IndexedDB\indexeddb.leveldb/000003.log 
+2026/10/08-00:10:53.000 5054 Level-0 table #5: started
+2026/10/08-00:10:53.013 5054 Level-0 table #5: 39127 bytes OK
+2026/10/08-00:10:53.017 5054 Delete type=0 #3
+2026/10/08-00:10:53.019 5054 Manual compaction at level-0 from '\x00\x02\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x03\x00\x00\x00' @ 0 : 0; will stop at (end)

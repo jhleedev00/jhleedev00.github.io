@@ -1,0 +1,38 @@
+2026-10-07 15:07:36.012: [INFO] CurrentProfilePath: C:\Users\dl1wj\OneDrive\Desktop\이력서\상공회\jhleedev00.github.io\tmp\edge-a4-profile\Default
+2026-10-07 15:07:36.012: [INFO] Profiles total count: 1
+2026-10-07 15:07:36.012: [INFO] Profile: name=프로필 1 path=C:\Users\dl1wj\OneDrive\Desktop\이력서\상공회\jhleedev00.github.io\tmp\edge-a4-profile\Default lastActive=2026-10-07T15:07:35.995Z
+2026-10-07 15:07:36.012: [INFO] LastUsedProfileDir: C:\Users\dl1wj\OneDrive\Desktop\이력서\상공회\jhleedev00.github.io\tmp\edge-a4-profile\Default
+2026-10-07 15:07:36.012: [INFO] MostRecentlyActiveProfile: name=프로필 1 path=C:\Users\dl1wj\OneDrive\Desktop\이력서\상공회\jhleedev00.github.io\tmp\edge-a4-profile\Default lastActive=2026-10-07T15:07:35.995Z
+2026-10-07 15:07:36.012: [INFO] OnDoneLoading sync enabled: 0
+2026-10-07 15:07:36.012: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-10-07 15:07:36.012: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-10-07 15:07:36.012: [INFO] BookmarksSnapshot Startup total=2 bar=2 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-07 15:07:36.059: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 0
+2026-10-07 15:07:36.260: [INFO] VisibilityChanged: 0
+2026-10-07 15:07:38.183: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 0
+2026-10-07 15:07:38.186: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 3
+2026-10-07 15:07:38.191: [INFO] Primary account changed.
+2026-10-07 15:07:38.191: [INFO] OnPrimaryAccountChanged PrimaryAccountChangeEvent::Type::kSet
+2026-10-07 15:07:38.198: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 3
+2026-10-07 15:07:41.187: [INFO] BookmarkNodeAdded, ABU: 0
+2026-10-07 15:07:41.187: [INFO] BookmarkNodeAdded, ABU: 0
+2026-10-07 15:07:41.187: [INFO] BookmarkNodeAdded, ABU: 0
+2026-10-07 15:07:41.187: [INFO] BookmarkNodeAdded, ABU: 0
+2026-10-07 15:07:41.188: [INFO] BookmarkNodeAdded, ABU: 0
+2026-10-07 15:07:41.188: [INFO] BookmarkNodeAdded, ABU: 0
+2026-10-07 15:07:41.188: [INFO] BookmarkNodeAdded, ABU: 0
+2026-10-07 15:07:41.196: [INFO] BookmarkBarPrefChanged showBar=0 showBarNTP=0
+2026-10-07 15:07:41.218: [INFO] VisibilityChanged: 1
+2026-10-07 15:07:41.332: [INFO] Sync initialization duration: 3003ms
+2026-10-07 15:07:44.479: [INFO] BookmarksSnapshot Shutdown total=9 bar=9 other=0 mobile=0 showBar=1 showBarNTP=0
+2026-10-07 15:10:50.659: [INFO] CurrentProfilePath: C:\Users\dl1wj\OneDrive\Desktop\이력서\상공회\jhleedev00.github.io\tmp\edge-a4-profile\Default
+2026-10-07 15:10:50.659: [INFO] Profiles total count: 1
+2026-10-07 15:10:50.660: [INFO] Profile: name=개인 path=C:\Users\dl1wj\OneDrive\Desktop\이력서\상공회\jhleedev00.github.io\tmp\edge-a4-profile\Default lastActive=2026-10-07T15:10:50.643Z
+2026-10-07 15:10:50.660: [INFO] LastUsedProfileDir: C:\Users\dl1wj\OneDrive\Desktop\이력서\상공회\jhleedev00.github.io\tmp\edge-a4-profile\Default
+2026-10-07 15:10:50.660: [INFO] MostRecentlyActiveProfile: name=개인 path=C:\Users\dl1wj\OneDrive\Desktop\이력서\상공회\jhleedev00.github.io\tmp\edge-a4-profile\Default lastActive=2026-10-07T15:10:50.643Z
+2026-10-07 15:10:50.661: [INFO] OnDoneLoading sync enabled: 1
+2026-10-07 15:10:50.661: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-10-07 15:10:50.661: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-10-07 15:10:50.661: [INFO] BookmarksSnapshot Startup total=9 bar=9 other=0 mobile=0 showBar=1 showBarNTP=0
+2026-10-07 15:10:51.073: [INFO] Sync initialization duration: 26ms
+2026-10-07 15:11:00.952: [INFO] BookmarksSnapshot Shutdown total=9 bar=9 other=0 mobile=0 showBar=1 showBarNTP=0
