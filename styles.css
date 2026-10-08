@@ -3590,6 +3590,9 @@ body {
 
 @media screen and (max-width: 640px) {
   .main-wrapper { padding: 20px 12px; }
+  .project-quick-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .proj-nav-pill { min-width: 0; padding: 10px 8px; }
+  .proj-nav-pill .pill-title { min-width: 0; white-space: normal; overflow-wrap: anywhere; }
   .section { margin-bottom: 36px; }
   .hero-card, .project-card, .skill-card, .experience-card { padding: 20px 16px; }
   .featured-case-study { padding: 0; }
