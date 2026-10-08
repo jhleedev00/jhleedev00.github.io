@@ -3543,8 +3543,8 @@ body {
   #profile .hero-title { font-size: clamp(23px, 2.6vw, 32px); line-height: 1.4; margin: 0; text-wrap: balance; }
 }
 .profile-credentials { min-width: 0; scroll-margin-top: 120px; }
-.profile-credentials .section-header { margin-bottom: 16px; }
-.profile-credentials .section-title { font-size: 24px; margin-bottom: 0; }
+.profile-overview-header { margin-bottom: 16px; }
+.profile-overview-header .section-title { font-size: 24px; margin-bottom: 0; }
 .credentials-grid { grid-template-columns: minmax(0, 1fr); gap: 12px; }
 .credentials-grid .edu-card { padding: 18px 20px; }
 .credentials-grid .edu-title { padding-bottom: 8px; margin-bottom: 10px; }
@@ -3624,9 +3624,9 @@ body {
 }
 
 @media print {
-  .profile-credentials .section-header { margin-bottom: 2mm !important; }
-  .profile-credentials .eyebrow { font-size: 6.5pt; }
-  .profile-credentials .section-title { font-size: 13pt; }
+  .profile-overview-header { margin-bottom: 2mm !important; }
+  .profile-overview-header .eyebrow { font-size: 6.5pt; }
+  .profile-overview-header .section-title { font-size: 13pt; }
   .profile-credentials .credentials-grid { grid-template-columns: 1fr !important; gap: 2mm !important; }
   .credentials-grid .edu-card { padding: 2.5mm 3mm !important; }
   .credentials-grid .edu-title { font-size: 9pt; padding-bottom: 1mm; margin-bottom: 1.5mm; }
