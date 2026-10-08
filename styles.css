@@ -3517,6 +3517,16 @@ body {
 }
 
 /* Shared credentials content: screen reflows, print remains an A4 document. */
+.profile-experience { grid-column: 1 / -1; min-width: 0; scroll-margin-top: 124px; }
+.profile-experience .experience-card { padding: 20px; }
+.profile-experience-title { font-size: 20px; margin: 0 0 16px; }
+.profile-experience .exp-desc { margin-bottom: 0; }
+@media print {
+  #experience.profile-experience { break-before: auto !important; page-break-before: auto !important; margin: 0 !important; }
+  .profile-experience .experience-card { padding: 3mm !important; break-inside: avoid; }
+  .profile-experience-title { font-size: 10pt; margin-bottom: 2mm; }
+  .profile-experience .exp-desc { font-size: 7.5pt; line-height: 1.4; }
+}
 .gpa-card-link { display: block; color: inherit; text-decoration: none; }
 .gpa-card-link:focus-visible { outline: 3px solid #1d4ed8; outline-offset: 4px; }
 @media (hover: hover) { .gpa-card-link:hover { border-color: #1d4ed8; } }
