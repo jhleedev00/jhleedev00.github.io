@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Active navigation tracking
-  const sections = document.querySelectorAll("section[id], article[id]");
+  const sections = document.querySelectorAll("section[id], article[id], .profile-credentials[id]");
   const navLinks = document.querySelectorAll(".nav-link");
 
   const observerOptions = {
