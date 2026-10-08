@@ -3598,12 +3598,15 @@ body {
   .featured-case-study { padding: 0; }
   .featured-sheet { padding: 20px 16px; }
   .hero-title { font-size: clamp(23px, 6vw, 30px); line-height: 1.4; }
+  #profile .hero-title { word-break: keep-all; }
   .hero-title br { display: none; }
   .hero-subtitle, .project-lead, .section-desc { font-size: 14px; }
   .section-title, .project-title, .featured-title { font-size: 23px; line-height: 1.4; }
   .contact-box { padding: 20px 16px; }
   .contact-list li { display: grid; grid-template-columns: 65px minmax(0, 1fr); gap: 10px; }
   .contact-list a, .contact-list span { text-align: right; font-size: 13px; }
+  .contact-list .contact-email { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .contact-list .contact-email a { text-align: left; }
   .profile-photo-wrapper-lg { width: 132px; height: 170px; }
   .credentials-grid .edu-card { padding: 16px; }
   .credentials-grid .edu-item strong, .point-item-easy h4 { font-size: 15px; }
