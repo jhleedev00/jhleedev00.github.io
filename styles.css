@@ -2038,23 +2038,41 @@ section[id] {
   text-overflow: ellipsis;
 }
 
-.project-jump-top-btn {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--slate-500);
-  padding: 3px 9px;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border);
-  background: var(--slate-50);
-  transition: all 0.15s ease;
+.back-to-top {
+  position: fixed;
+  right: max(20px, env(safe-area-inset-right));
+  bottom: calc(20px + env(safe-area-inset-bottom));
+  z-index: 1100;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 88px;
+  min-height: 48px;
+  padding: 10px 16px;
+  border: 1px solid var(--primary);
+  border-radius: 999px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
   text-decoration: none;
-  margin-left: auto;
+  box-shadow: 0 4px 16px rgb(15 23 42 / 18%);
 }
 
-.project-jump-top-btn:hover {
-  color: var(--primary);
-  border-color: var(--primary);
-  background: var(--primary-light);
+.back-to-top:hover {
+  background: var(--slate-900);
+  border-color: var(--slate-900);
+  color: #fff;
+}
+
+.back-to-top:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }
 
 /* -------------------------------------------------------------
@@ -2292,7 +2310,7 @@ section[id] {
   .navbar,
   .footer,
   .project-quick-nav,
-  .project-jump-top-btn {
+  .back-to-top {
     display: none !important;
   }
 
@@ -3537,14 +3555,20 @@ body {
 .gpa-card-link:focus-visible { outline: 3px solid #1d4ed8; outline-offset: 4px; }
 @media (hover: hover) { .gpa-card-link:hover { border-color: #1d4ed8; } }
 @media screen and (min-width: 961px) {
-  .profile-grid { grid-template-columns: minmax(0, 1fr) 320px; gap: 24px; }
+  .profile-grid { grid-template-columns: minmax(0, 1fr) clamp(320px, 32vw, 380px); gap: 28px; }
   .profile-grid > div { min-width: 0; }
-  .profile-credentials .credentials-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
+  .profile-credentials .credentials-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; }
   .credentials-grid .edu-card:first-child { grid-column: 1 / -1; }
-  .contact-box { padding: 24px 18px; }
-  .profile-photo-wrapper-lg { width: 150px; height: 194px; }
+  .contact-box { padding: 28px 24px; }
+  .profile-photo-wrapper-lg { width: 220px; height: 284px; margin-bottom: 20px; }
 }
 @media screen {
+  .contact-header-centered { padding-bottom: 24px; margin-bottom: 20px; }
+  .profile-header-info-centered { gap: 8px; }
+  .profile-header-info-centered .profile-name { font-size: 28px; }
+  .profile-header-info-centered .profile-name-en { display: block; margin: 6px 0 0; font-size: 14px; }
+  .profile-header-info-centered .profile-univ { font-size: 13px; line-height: 1.6; }
+  .profile-photo-wrapper-lg .profile-photo { object-position: center top; }
   #profile .hero-header { margin-bottom: 24px; padding-bottom: 20px; }
   #profile .hero-title { font-size: clamp(23px, 2.6vw, 32px); line-height: 1.4; margin: 0; text-wrap: balance; }
 }
@@ -3578,6 +3602,7 @@ body {
   .contact-col { grid-row: 1; }
   .bio-col, .contact-col, .points-list, .project-media-col { min-width: 0; }
   .contact-box { max-width: none; }
+  .profile-photo-wrapper-lg { width: 220px; height: 284px; margin-bottom: 20px; }
   .project-content-grid, .featured-story-grid, .featured-detail-grid {
     grid-template-columns: minmax(0, 1fr); gap: 20px;
   }
@@ -3613,7 +3638,7 @@ body {
   .contact-list a, .contact-list span { text-align: right; font-size: 13px; }
   .contact-list .contact-email { grid-template-columns: minmax(0, 1fr); gap: 4px; }
   .contact-list .contact-email a { text-align: left; }
-  .profile-photo-wrapper-lg { width: 132px; height: 170px; }
+  .profile-photo-wrapper-lg { width: 184px; height: 238px; margin-bottom: 18px; }
   .credentials-grid .edu-card { padding: 16px; }
   .credentials-grid .edu-item strong, .point-item-easy h4 { font-size: 15px; }
   .credentials-grid .edu-sub, .credentials-grid .edu-meta,
@@ -3633,7 +3658,32 @@ body {
   .profile-overview-header { margin-bottom: 2mm !important; }
   .profile-overview-header .eyebrow { font-size: 6.5pt; }
   .profile-overview-header .section-title { font-size: 13pt; }
-  .profile-credentials .credentials-grid { grid-template-columns: 1fr !important; gap: 2mm !important; }
+  /* Mirror the desktop profile composition, scaled to the A4 content area. */
+  #profile .profile-grid {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr) !important;
+    gap: 5mm !important;
+    align-items: start;
+  }
+  .profile-grid > .bio-col, .profile-grid > .contact-col { min-width: 0; }
+  .profile-credentials .credentials-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 2.5mm !important;
+    align-items: stretch;
+  }
+  .credentials-grid .edu-card:first-child { grid-column: 1 / -1; }
+  #profile .profile-photo-wrapper-lg {
+    width: 43mm;
+    height: 55.5mm;
+    max-width: 100%;
+    margin-bottom: 4mm;
+  }
+  #profile .profile-photo-wrapper-lg .profile-photo { object-position: center top; }
+  #profile .profile-header-info-centered { gap: 2mm; }
+  #profile .profile-header-info-centered .profile-name-en {
+    display: block;
+    margin: 1.5mm 0 0;
+    font-size: 9pt;
+  }
   .credentials-grid .edu-card { padding: 2.5mm 3mm !important; }
   .credentials-grid .edu-title { font-size: 9pt; padding-bottom: 1mm; margin-bottom: 1.5mm; }
   .credentials-grid .edu-item { margin-bottom: 1.5mm; }
