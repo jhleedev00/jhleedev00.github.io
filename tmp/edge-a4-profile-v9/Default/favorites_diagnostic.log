@@ -1,0 +1,17 @@
+2026-10-08 05:48:36.891: [INFO] CurrentProfilePath: C:\Users\dl1wj\OneDrive\Desktop\이력서\상공회\jhleedev00.github.io\tmp\edge-a4-profile-v9\Default
+2026-10-08 05:48:36.891: [INFO] Profiles total count: 1
+2026-10-08 05:48:36.891: [INFO] Profile: name=프로필 1 path=C:\Users\dl1wj\OneDrive\Desktop\이력서\상공회\jhleedev00.github.io\tmp\edge-a4-profile-v9\Default lastActive=2026-10-08T05:48:36.859Z
+2026-10-08 05:48:36.891: [INFO] LastUsedProfileDir: C:\Users\dl1wj\OneDrive\Desktop\이력서\상공회\jhleedev00.github.io\tmp\edge-a4-profile-v9\Default
+2026-10-08 05:48:36.891: [INFO] MostRecentlyActiveProfile: name=프로필 1 path=C:\Users\dl1wj\OneDrive\Desktop\이력서\상공회\jhleedev00.github.io\tmp\edge-a4-profile-v9\Default lastActive=2026-10-08T05:48:36.859Z
+2026-10-08 05:48:36.891: [INFO] OnDoneLoading sync enabled: 0
+2026-10-08 05:48:36.891: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-10-08 05:48:36.891: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-10-08 05:48:36.891: [INFO] BookmarksSnapshot Startup total=2 bar=2 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-10-08 05:48:36.999: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 0
+2026-10-08 05:48:37.168: [INFO] VisibilityChanged: 0
+2026-10-08 05:48:42.720: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 0
+2026-10-08 05:48:42.734: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 3
+2026-10-08 05:48:42.743: [INFO] Primary account changed.
+2026-10-08 05:48:42.743: [INFO] OnPrimaryAccountChanged PrimaryAccountChangeEvent::Type::kSet
+2026-10-08 05:48:42.759: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 3
+2026-10-08 05:48:42.963: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 3
