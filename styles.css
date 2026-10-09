@@ -3481,6 +3481,22 @@ body {
 }
 
 @media screen and (min-width: 961px) {
+  /* Use the VIP card's inset and text/media proportions for both LOGITLE sheets. */
+  #proj-warehouse.featured-case-study { padding: 0; }
+  #proj-warehouse > .featured-sheet { padding: 30px; }
+  #proj-warehouse .featured-story-grid,
+  #proj-warehouse .featured-detail-grid {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: 28px;
+    align-items: stretch;
+  }
+  #proj-warehouse .featured-story-copy,
+  #proj-warehouse .featured-detail-points { gap: 16px; }
+  #proj-warehouse .featured-story-copy { grid-template-rows: repeat(3, minmax(min-content, 1fr)); }
+  #proj-warehouse .featured-detail-points { grid-template-rows: repeat(3, minmax(min-content, 1fr)) auto; }
+  #proj-warehouse .case-point { align-content: center; }
+  #proj-warehouse .featured-story-grid > *,
+  #proj-warehouse .featured-detail-grid > * { min-width: 0; }
   #proj-vip .project-content-grid,
   #proj-kickcan .project-content-grid,
   #proj-guidedog .project-content-grid,
