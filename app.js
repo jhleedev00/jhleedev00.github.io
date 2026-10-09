@@ -1,8 +1,52 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Print handler
+  // Prefer full-resolution posters; unavailable YouTube sizes can return a
+  // successful response containing only a tiny placeholder image.
+  const thumbnailReady = [...document.querySelectorAll(".youtube-print-card img")].map(img => {
+    const videoId = img.src.match(/\/vi\/([^/]+)\//)?.[1];
+    if (!videoId) return Promise.resolve();
+    return new Promise(resolve => {
+      const sizes = ["maxresdefault", "sddefault", "hqdefault"];
+      let index = 0;
+      const finish = () => {
+        img.removeEventListener("load", loaded);
+        img.removeEventListener("error", failed);
+        resolve();
+      };
+      const next = () => {
+        img.src = `https://img.youtube.com/vi/${videoId}/${sizes[index]}.jpg`;
+      };
+      const failed = () => {
+        if (++index < sizes.length) next();
+        else finish();
+      };
+      const loaded = () => {
+        if (img.naturalWidth <= 120) failed();
+        else finish();
+      };
+      img.addEventListener("load", loaded);
+      img.addEventListener("error", failed);
+      next();
+    });
+  });
+
+  // Avoid opening print preview while the higher-resolution posters are loading.
   const printBtn = document.getElementById("print");
   if (printBtn) {
-    printBtn.addEventListener("click", () => window.print());
+    printBtn.addEventListener("click", async () => {
+      if (printBtn.disabled) return;
+      printBtn.disabled = true;
+      let timeout;
+      try {
+        await Promise.race([
+          Promise.all(thumbnailReady),
+          new Promise(resolve => { timeout = setTimeout(resolve, 8000); })
+        ]);
+        window.print();
+      } finally {
+        clearTimeout(timeout);
+        printBtn.disabled = false;
+      }
+    });
   }
 
   // Match the menu to the visible anchor, including sections nested in the profile.

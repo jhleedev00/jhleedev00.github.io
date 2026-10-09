@@ -266,7 +266,12 @@
 }
 
 .featured-photo-slot img {
-  object-fit: cover;
+  object-fit: contain;
+}
+
+.featured-video-slot iframe {
+  position: absolute;
+  inset: 0;
 }
 
 .featured-video-slot:has(iframe[src^="https://www.youtube.com/embed/"]) iframe,
@@ -1566,6 +1571,7 @@ a {
   padding: 6px;
 }
 
+
 .youtube-print-card {
   display: none;
 }
@@ -2645,7 +2651,7 @@ section[id] {
     height: 100% !important;
     max-height: none !important;
     padding: 0 !important;
-    object-fit: cover !important;
+    object-fit: contain !important;
     aspect-ratio: auto;
   }
 
