@@ -2670,7 +2670,7 @@ section[id] {
     height: 100% !important;
     max-height: none !important;
     padding: 0 !important;
-    object-fit: contain !important;
+    object-fit: cover !important;
     aspect-ratio: auto;
   }
 
@@ -3843,9 +3843,15 @@ body {
 
   .featured-case-study .featured-media-grid-page1,
   .featured-case-study .featured-media-grid-page2 {
-    grid-template-rows: auto auto;
-    align-content: start;
-    align-items: start;
+    align-content: stretch;
+    align-items: stretch;
+    min-height: 0;
+  }
+  .featured-case-study .featured-media-grid-page1 {
+    grid-template-rows: minmax(0, 1.65fr) minmax(0, 1fr);
+  }
+  .featured-case-study .featured-media-grid-page2 {
+    grid-template-rows: minmax(0, 1.45fr) minmax(0, 0.78fr);
   }
   .featured-case-study .featured-media-grid .featured-media-wide {
     grid-column: 1 / -1;
@@ -3853,8 +3859,18 @@ body {
   }
   .featured-case-study .featured-media-grid .featured-video-slot,
   .featured-case-study .featured-media-grid .featured-photo-slot {
-    flex: none;
-    aspect-ratio: 16 / 9;
+    flex: 1 1 0;
+    min-height: 0;
+    aspect-ratio: auto;
+  }
+  /* Bound the bitmap to its own slot, never to the adjacent caption/card. */
+  #projects .featured-photo-slot img {
+    position: absolute;
+    inset: 0;
+    width: 100% !important;
+    height: 100% !important;
+    max-height: none !important;
+    padding: 0 !important;
   }
   #projects .featured-photo-slot img,
   #projects .media-box-modern > img {
@@ -3862,6 +3878,11 @@ body {
     aspect-ratio: 16 / 9;
   }
   #projects .project-media-col { justify-content: flex-start; }
+  #projects #proj-balance .media-box-modern > img,
+  #projects #proj-guidedog .media-box-modern > img {
+    object-fit: cover !important;
+    padding: 0 !important;
+  }
   #projects .featured-media figcaption,
   #projects .media-caption { min-height: 0; }
 }
