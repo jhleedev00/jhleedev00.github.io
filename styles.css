@@ -3886,3 +3886,67 @@ body {
   #projects .featured-media figcaption,
   #projects .media-caption { min-height: 0; }
 }
+
+@media print {
+  /* Definite page/card height is required for fractional media rows to fill.
+     A min-height alone leaves the image column at its intrinsic 16:9 height. */
+  #projects > .project-card:not(.featured-case-study) {
+    height: 255mm;
+    min-height: 255mm;
+    box-sizing: border-box;
+  }
+  #projects .project-content-grid {
+    flex: 1 1 0;
+    min-height: 0;
+    grid-template-rows: minmax(0, 1fr);
+  }
+  #projects .project-content-grid > * { min-height: 0; }
+  #projects .project-media-col {
+    display: grid;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    align-content: stretch;
+    align-items: stretch;
+    min-height: 0;
+  }
+  #projects .project-media-col > .media-box-modern {
+    display: flex !important;
+    flex-direction: column;
+    min-height: 0;
+    margin: 0 !important;
+    overflow: hidden;
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+  #projects .media-box-modern > div[style*="padding-bottom"] {
+    flex: 1 1 0;
+    min-height: 0;
+    height: auto !important;
+    padding-bottom: 0 !important;
+  }
+  #projects .media-box-modern > img {
+    flex: 1 1 0;
+    min-height: 0;
+    height: 0 !important;
+    max-height: none !important;
+    aspect-ratio: auto;
+    padding: 0 !important;
+  }
+  #projects .media-caption,
+  #projects .featured-media figcaption { flex: 0 0 auto; }
+
+  #proj-warehouse.featured-case-study > .featured-sheet {
+    display: flex;
+    flex-direction: column;
+  }
+  #proj-warehouse .featured-sheet > * { flex-shrink: 0; }
+  #proj-warehouse .featured-story-grid,
+  #proj-warehouse .featured-detail-grid {
+    flex: 1 1 0;
+    min-height: 0 !important;
+    grid-template-rows: minmax(0, 1fr);
+  }
+  #proj-warehouse .featured-story-grid > *,
+  #proj-warehouse .featured-detail-grid > * { min-height: 0; }
+  #proj-warehouse .featured-media-grid { min-height: 0; }
+  #proj-warehouse .featured-photo-slot img { aspect-ratio: auto; }
+}
