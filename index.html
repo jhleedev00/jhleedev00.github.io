@@ -259,7 +259,7 @@
 
         <h3 class="project-title featured-title">물류센터 출고 지능화 AX <span>(LOGITLE)</span></h3>
           <p class="project-lead featured-lead">
-            물류센터 출고 작업을 위한 다중 AMR·관제 시스템입니다. 저는 LiDAR 기반 도크 인식과 단계별 정밀 도킹 제어를 담당했습니다.
+            주문·배차부터 로봇팔 적재와 작업대 이송까지 연결하는 다중 로봇 물류 시스템입니다. 제가 프로젝트를 기획했으며, LiDAR 기반 도크 인식과 정밀 도킹 제어를 구현했습니다.
           </p>
 
           <div class="featured-stat-grid" aria-label="프로젝트 핵심 성과">
@@ -275,30 +275,31 @@
             <span class="tag">LiDAR / Odometry</span>
             <span class="tag">Zenoh</span>
             <span class="tag">FastAPI / React · 팀 관제</span>
+            <span class="tag">LLM 경로 판단 · 팀 구현</span>
           </div>
 
           <div class="project-role-badge featured-role">
             <span>담당 역할</span>
-            <strong>정밀 도킹 · 프로젝트 기획 · 로컬 네트워크 구축</strong>
+            <strong>프로젝트 기획 · 정밀 도킹 구현 · 로컬 네트워크 구축</strong>
           </div>
 
           <div class="featured-story-grid">
             <div class="featured-story-copy">
               <div class="case-point">
                 <span>1</span>
-                <div><h4>프로젝트 주제</h4><p>AMR의 물류 이송과 정밀 정차를 연결하는 출고 자동화 시스템을 개발 중입니다.</p></div>
+                <div><h4>직접 기획한 물류 출고 자동화</h4><p>주문 기반 출고 작업을 FMS 관제, AMR 운반·도킹, OMX 로봇팔 적재·하역으로 연결하는 프로젝트를 기획했습니다.</p></div>
               </div>
               <div class="case-point">
                 <span>2</span>
                 <div><h4>역할</h4>
                   <p>1. LiDAR 점군 기반 도크 인식과 정밀 도킹 제어를 구현했습니다.</p>
-                  <p>2. LLM 및 의사결정 모델을 활용한 경로 생성 방안을 제안했습니다.</p>
+                  <p>2. LLM을 활용한 경로 판단 방안을 제안했습니다.</p>
                   <p>3. 프로젝트용 로컬 네트워크를 구축·운영했습니다.</p>
                 </div>
               </div>
               <div class="case-point">
                 <span>3</span>
-                <div><h4>핵심 구현</h4><p>경유지 접근·각도 정렬·감속 후진을 상태 머신으로 분리하고 인지 실패·취소 시 정지 처리를 넣었습니다.</p></div>
+                <div><h4>LLM 경로 판단 · 팀 구현</h4><p>이동 가능한 후보 노드 중 LLM이 다음 노드를 선택하고, 코드가 연결 간선을 검증합니다. 실패하면 알고리즘 경로로 대체하며, A*와의 비교 검증을 진행 중입니다.</p></div>
               </div>
             </div>
 
@@ -315,7 +316,7 @@
                   </a>
                   <div class="media-slot-empty"><strong>YouTube VIDEO 01</strong><code>iframe src에 embed 링크 입력</code></div>
                 </div>
-                <figcaption>AI 인지부터 FMS 명령과 로봇 동작까지 이어지는 통합 시연</figcaption>
+                <figcaption>주문 선택·배차부터 경로 예약, AMR 주행·도킹, 로봇팔 적재까지의 팀 시스템 시연</figcaption>
               </figure>
 
               <figure class="featured-media">
