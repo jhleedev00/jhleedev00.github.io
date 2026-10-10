@@ -3676,16 +3676,40 @@ body {
   .profile-overview-header { margin-bottom: 2mm !important; }
   .profile-overview-header .eyebrow { font-size: 6.5pt; }
   .profile-overview-header .section-title { font-size: 13pt; }
-  /* Mirror the desktop profile composition, scaled to the A4 content area. */
+  /* Fill the first A4 sheet and keep credentials/contact on a shared baseline. */
+  #profile .hero-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 265mm;
+    box-sizing: border-box;
+    break-inside: avoid-page;
+  }
   #profile .profile-grid {
     grid-template-columns: minmax(0, 3fr) minmax(0, 2fr) !important;
+    grid-template-rows: minmax(min-content, 1fr) auto;
     gap: 5mm !important;
-    align-items: start;
+    align-items: stretch;
+    flex: 1;
   }
+  #profile .bio-col > .profile-credentials {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  #profile .contact-col { display: flex; }
+  #profile .contact-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+  }
+  #profile .gpa-card { margin-top: auto; }
   .profile-grid > .bio-col, .profile-grid > .contact-col { min-width: 0; }
   .profile-credentials .credentials-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 2.5mm !important;
+    grid-template-rows: auto minmax(min-content, 1fr);
+    flex: 1;
+    gap: 3mm !important;
     align-items: stretch;
   }
   .credentials-grid .edu-card:first-child { grid-column: 1 / -1; }
@@ -3702,11 +3726,14 @@ body {
     margin: 1.5mm 0 0;
     font-size: 9pt;
   }
-  .credentials-grid .edu-card { padding: 2.5mm 3mm !important; }
-  .credentials-grid .edu-title { font-size: 9pt; padding-bottom: 1mm; margin-bottom: 1.5mm; }
-  .credentials-grid .edu-item { margin-bottom: 1.5mm; }
-  .credentials-grid .edu-item strong { font-size: 8pt; }
-  .credentials-grid .edu-sub, .credentials-grid .edu-meta { font-size: 7pt; line-height: 1.35; margin-bottom: 0; }
+  .credentials-grid .edu-card { padding: 4mm !important; }
+  .credentials-grid .edu-title { font-size: 11pt; padding-bottom: 2mm; margin-bottom: 3mm; }
+  .credentials-grid .edu-item { margin-bottom: 3mm; }
+  .credentials-grid .edu-item strong { font-size: 9pt; }
+  .credentials-grid .edu-sub, .credentials-grid .edu-meta { font-size: 8pt !important; line-height: 1.5 !important; margin-bottom: 0; }
+  #profile .profile-experience .experience-card { padding: 4mm !important; }
+  #profile .profile-experience-title { font-size: 12pt; margin-bottom: 3mm; }
+  #profile .profile-experience .exp-desc { font-size: 9pt; line-height: 1.5; }
 }
 
 .edu-item > .edu-institution {
