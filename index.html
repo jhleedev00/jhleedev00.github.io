@@ -259,47 +259,47 @@
 
         <h3 class="project-title featured-title">AX Multi-Robot Logistics <span>(LOGITLE)</span></h3>
           <p class="project-lead featured-lead">
-            주문·배차부터 로봇팔 적재와 작업대 이송까지 연결하는 다중 로봇 물류 시스템입니다. 제가 프로젝트를 기획했으며, LiDAR 기반 도크 인식과 정밀 도킹 제어를 구현했습니다.
+            FMS 관제, AMR 운반, OMX 적재·하역을 연결하는 주문 기반 물류 자동화 시스템입니다. 제가 프로젝트를 기획했으며, 충전 스테이션 정밀 도킹을 구현하고 LLM 경로 판단 시험·평가에 참여했습니다.
           </p>
 
-          <div class="featured-stat-grid" aria-label="프로젝트 핵심 성과">
-            <div class="featured-stat"><strong>1.5 cm</strong><span>코드상 도킹 완료 기준</span></div>
-            <div class="featured-stat"><strong>20 Hz</strong><span>제어 루프 설정</span></div>
-            <div class="featured-stat"><strong>2D ICP</strong><span>V자 도크 인식</span></div>
-            <div class="featured-stat"><strong>ROS 2 Action</strong><span>도킹 실행·취소</span></div>
+          <div class="featured-stat-grid" aria-label="프로젝트 시스템 구성">
+            <div class="featured-stat"><strong>AMR 3대</strong><span>TurtleBot3 운반·도킹</span></div>
+            <div class="featured-stat"><strong>OMX 4대</strong><span>피킹·패킹 적재 및 하역</span></div>
+            <div class="featured-stat"><strong>Route Graph</strong><span>노드·통로 시간 예약</span></div>
+            <div class="featured-stat"><strong>LLM</strong><span>다음 노드 반복 선택</span></div>
           </div>
 
           <div class="tag-cloud featured-tags">
-            <span class="tag">ROS 2 Jazzy</span>
+            <span class="tag">ROS 2 Jazzy / Nav2</span>
             <span class="tag">2D ICP / PID</span>
             <span class="tag">LiDAR / Odometry</span>
-            <span class="tag">Zenoh</span>
+            <span class="tag">Zenoh / MQTT</span>
             <span class="tag">FastAPI / React · 팀 관제</span>
             <span class="tag">LLM 경로 판단 · 팀 구현</span>
           </div>
 
           <div class="project-role-badge featured-role">
             <span>담당 역할</span>
-            <strong>프로젝트 기획 · 정밀 도킹 구현 · 로컬 네트워크 구축</strong>
+            <strong>프로젝트 기획 · 정밀 도킹 구현 · LLM 시험·평가 · 네트워크 구축</strong>
           </div>
 
           <div class="featured-story-grid">
             <div class="featured-story-copy">
               <div class="case-point">
                 <span>1</span>
-                <div><h4>직접 기획한 물류 출고 자동화</h4><p>주문 기반 출고 작업을 FMS 관제, AMR 운반·도킹, OMX 로봇팔 적재·하역으로 연결하는 프로젝트를 기획했습니다.</p></div>
+                <div><h4>직접 기획한 물류 출고 자동화</h4><p>다중 로봇의 경로 조율과 장비 간 인계를 다루는 프로젝트를 기획했습니다. 주문·배차부터 피킹, 패킹 스테이션 이송과 컨베이어 하역까지 연결합니다.</p></div>
               </div>
               <div class="case-point">
                 <span>2</span>
                 <div><h4>역할</h4>
-                  <p>1. LiDAR 점군 기반 도크 인식과 정밀 도킹 제어를 구현했습니다.</p>
-                  <p>2. LLM을 활용한 경로 판단 방안을 제안했습니다.</p>
+                  <p>1. LiDAR·ICP 기반 충전 스테이션 정밀 도킹을 구현했습니다.</p>
+                  <p>2. LLM 경로 판단을 제안하고 모델 시험·평가에 참여했습니다.</p>
                   <p>3. 프로젝트용 로컬 네트워크를 구축·운영했습니다.</p>
                 </div>
               </div>
               <div class="case-point">
                 <span>3</span>
-                <div><h4>LLM 경로 판단 · 팀 구현</h4><p>이동 가능한 후보 노드 중 LLM이 다음 노드를 선택하고, 코드가 연결 간선을 검증합니다. 실패하면 알고리즘 경로로 대체하며, A*와의 비교 검증을 진행 중입니다.</p></div>
+                <div><h4>LLM 경로 선택·시간 예약</h4><p>LLM이 인접 노드를 반복 선택하고 코드가 연결을 검증합니다. 예약기가 노드·통로의 통과 시간을 조정하며, 실제 점유로 막히면 정지 후 LLM을 다시 호출합니다. 최단 경로는 보장하지 않습니다.</p></div>
               </div>
             </div>
 
@@ -348,7 +348,7 @@
                   </a>
                   <div class="media-slot-empty"><strong>YouTube FMS 시연</strong><code>https://www.youtube.com/embed/E0810Q3jOZM</code></div>
                 </div>
-                <figcaption>FMS 시연</figcaption>
+                <figcaption>FMS 웹 관제: 배차·경로 예약 및 로봇 상태 모니터링</figcaption>
               </figure>
             </div>
           </div>
@@ -364,7 +364,7 @@
           <div class="featured-detail-heading">
             <div>
               <span class="eyebrow">SYSTEM DESIGN</span>
-              <h3>도킹 알고리즘 전체 흐름</h3>
+              <h3>충전 스테이션 정밀 도킹 흐름</h3>
             </div>
           </div>
 
@@ -386,7 +386,7 @@
               </div>
               <div class="case-point case-point-accent">
                 <span>3</span>
-                <div><h4>실패 처리·팀 시스템 연동</h4><p>Action 실행·취소와 인지 실패 시 정지를 구현했습니다. 팀 FMS는 모의 데이터 기반이며 실기체 통합은 별도 검증 단계입니다.</p></div>
+                <div><h4>실패 처리·통합 안정화</h4><p>Action 실행·취소와 인지 실패 시 정지를 구현했습니다. 팀은 FMS·OMX 연동, AMR 주행·정렬 보정과 LLM·A* 비교 검증을 진행 중입니다.</p></div>
               </div>
 
               <div class="featured-validation">
