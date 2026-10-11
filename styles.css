@@ -2183,15 +2183,6 @@ section[id] {
   .exp-company-group {
     gap: 12px;
   }
-  .nav-dropdown-menu {
-    position: static;
-    transform: none;
-    box-shadow: none;
-    display: none;
-  }
-  .nav-dropdown-wrapper:hover .nav-dropdown-menu {
-    display: block;
-  }
 }
 
 
