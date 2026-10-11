@@ -1929,15 +1929,14 @@ section[id] {
   transition: transform 0.2s ease;
 }
 
-.nav-dropdown-wrapper:hover .dropdown-caret {
+.nav-dropdown-wrapper button { border: 0; background: transparent; font-family: inherit; cursor: pointer; }
+.nav-dropdown-wrapper button:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+.nav-dropdown-wrapper button[aria-expanded="true"] .dropdown-caret {
   transform: rotate(180deg);
 }
 
 .nav-dropdown-menu {
-  position: absolute;
-  top: calc(100% + 6px);
-  left: 50%;
-  transform: translateX(-50%) translateY(8px);
+  position: fixed;
   background: #ffffff;
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
@@ -1945,18 +1944,12 @@ section[id] {
   min-width: 250px;
   padding: 8px;
   list-style: none;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  max-height: calc(100dvh - 150px);
+  overflow-y: auto;
   z-index: 1200;
 }
 
-.nav-dropdown-wrapper:hover .nav-dropdown-menu,
-.nav-dropdown-wrapper:focus-within .nav-dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(-50%) translateY(0);
-}
+.nav-dropdown-menu[hidden] { display: none; }
 
 .nav-dropdown-menu li a {
   display: flex;
@@ -3612,8 +3605,7 @@ body {
   .nav-link { padding: 10px; font-size: 14px; min-height: 44px; }
   .nav-actions { width: 100%; justify-content: flex-end; }
   .btn-github, .btn-print { min-height: 44px; font-size: 13px; }
-  .nav-dropdown-menu, .nav-dropdown-wrapper:hover .nav-dropdown-menu,
-  .dropdown-caret { display: none; }
+  .dropdown-caret { display: inline-block; }
   .main-wrapper { width: 100%; padding: 24px 16px; }
   .section, .project-card, section[id], article[id] { scroll-margin-top: 124px; }
   .profile-grid { grid-template-columns: minmax(0, 1fr); gap: 20px; }

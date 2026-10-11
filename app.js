@@ -49,11 +49,59 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  const projectToggle = document.querySelector('[aria-controls="project-jump-menu"]');
+  const projectMenu = document.getElementById("project-jump-menu");
+  const positionProjectMenu = () => {
+    const rect = projectToggle.getBoundingClientRect();
+    const width = Math.min(300, window.innerWidth - 24);
+    projectMenu.style.width = `${width}px`;
+    projectMenu.style.left = `${Math.max(12, Math.min(rect.left, window.innerWidth - width - 12))}px`;
+    projectMenu.style.top = `${rect.bottom + 8}px`;
+  };
+  const closeProjectMenu = () => {
+    projectMenu.hidden = true;
+    projectToggle.setAttribute("aria-expanded", "false");
+  };
+  projectToggle.addEventListener("click", () => {
+    const opening = projectMenu.hidden;
+    projectMenu.hidden = !opening;
+    projectToggle.setAttribute("aria-expanded", String(opening));
+    if (opening) positionProjectMenu();
+  });
+  projectToggle.addEventListener("keydown", event => {
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+      projectMenu.hidden = false;
+      projectToggle.setAttribute("aria-expanded", "true");
+      positionProjectMenu();
+      projectMenu.querySelector("a").focus();
+    }
+  });
+  projectMenu.addEventListener("click", event => {
+    if (event.target.closest("a")) closeProjectMenu();
+  });
+  document.addEventListener("click", event => {
+    if (!event.target.closest(".nav-dropdown-wrapper")) closeProjectMenu();
+  });
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && !projectMenu.hidden) {
+      closeProjectMenu();
+      projectToggle.focus();
+    }
+  });
+  document.addEventListener("focusin", event => {
+    if (!event.target.closest(".nav-dropdown-wrapper")) closeProjectMenu();
+  });
+  window.addEventListener("resize", () => {
+    if (!projectMenu.hidden) positionProjectMenu();
+  });
+  document.querySelector(".nav-menu").addEventListener("scroll", closeProjectMenu, { passive: true });
+
   // Match the menu to the visible anchor, including sections nested in the profile.
   const navLinks = [...document.querySelectorAll(".nav-link")];
   const targets = navLinks.map(link => ({
     link,
-    target: document.querySelector(link.getAttribute("href"))
+    target: document.querySelector(link.getAttribute("href") || link.dataset.section)
   })).filter(item => item.target);
   let navigationFrame = 0;
   const updateNavigation = () => {
