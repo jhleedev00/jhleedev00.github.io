@@ -3973,6 +3973,31 @@ body {
   .contact-list a { overflow-wrap: anywhere; }
 }
 
+#profile .profile-photo-wrapper-lg {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border: 1px solid #94a3b8;
+  box-shadow: 0 0 0 3px #fff, 0 6px 18px rgba(15, 23, 42, 0.14);
+  background: #fff;
+}
+#profile .profile-photo-wrapper-lg .profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transform: scale(1.12);
+  transform-origin: center top;
+}
+@media screen {
+  #profile .profile-photo-wrapper-lg { width: min(260px, 100%); height: auto; }
+}
+@media screen and (max-width: 640px) {
+  #profile .profile-photo-wrapper-lg { width: min(210px, 100%); }
+}
+@media print {
+  #profile .profile-photo-wrapper-lg { width: 48mm; height: 64mm; box-shadow: none; }
+}
+
 #profile .gpa-card-footer {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
