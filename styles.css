@@ -3972,3 +3972,42 @@ body {
   .featured-stat { align-items: flex-start; flex-direction: column; gap: 4px; }
   .contact-list a { overflow-wrap: anywhere; }
 }
+
+/* Native text remains readable without remote badge images or print backgrounds. */
+#skills .skill-chip {
+  display: inline-block;
+  padding: 6px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #f1f5f9;
+  color: #0f172a;
+  font-size: 16px;
+  font-weight: 650;
+  line-height: 1.45;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+@media screen {
+  #skills .td-cat { white-space: normal; width: 240px; }
+  #skills .td-tech { gap: 8px; }
+}
+@media screen and (max-width: 768px) {
+  #skills .td-cat { width: 100%; padding: 14px 16px 6px; border-bottom: 0; font-size: 17px; }
+  #skills .td-tech { display: flex; width: 100%; padding: 6px 16px 16px; }
+}
+@media print {
+  #skills .tech-stack-table { display: table !important; table-layout: fixed; }
+  #skills .tech-stack-table tbody { display: table-row-group !important; }
+  #skills .tech-stack-table tr { break-inside: avoid; }
+  #skills .tech-stack-table .td-cat { width: 29% !important; white-space: normal; font-size: 9pt !important; }
+  #skills .tech-stack-table .td-tech { display: table-cell !important; font-size: 9pt !important; }
+  #skills .skill-chip {
+    font-size: 9pt;
+    padding: 1mm 1.5mm;
+    margin: 0.6mm 0.8mm 0.6mm 0;
+    background: #fff;
+    color: #000;
+    border-color: #94a3b8;
+    border-radius: 1mm;
+  }
+}
