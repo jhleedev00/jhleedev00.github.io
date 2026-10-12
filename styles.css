@@ -3935,6 +3935,7 @@ body {
 }
 
 /* Larger screen typography; print keeps its independently sized A4 layout. */
+.credentials-grid .credentials-qualifications { grid-column: 1 / -1; }
 @media screen {
   body { font-size: 16px; }
   .section-desc, .hero-subtitle, .project-lead, .featured-lead,
