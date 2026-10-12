@@ -3935,6 +3935,20 @@ body {
 }
 
 /* Larger screen typography; print keeps its independently sized A4 layout. */
+.credentials-grid .credentials-qualifications { grid-column: 1 / -1; }
+#profile .edu-item .education-gpa { margin: 10px 0 8px; padding: 12px 16px; }
+#profile .education-gpa .gpa-card-header { align-items: center; }
+@media screen and (min-width: 961px) {
+  .credentials-qualifications { display: flex; flex-direction: column; }
+  .credentials-qualifications .edu-item { flex: 1; margin-bottom: 12px; }
+  .credentials-qualifications .edu-item:last-child { margin-bottom: 0; }
+}
+@media print {
+  #profile .edu-item .education-gpa { margin: 2mm 0; padding: 2mm 3mm; break-inside: avoid; }
+  #profile .education-gpa .gpa-score { font-size: 14pt; }
+  #profile .education-gpa .gpa-badge, #profile .education-gpa .gpa-tag-sub { font-size: 7pt; }
+  #profile .education-gpa .gpa-progress-bar { height: 1mm; margin-bottom: 1mm; }
+}
 @media screen {
   body { font-size: 16px; }
   .section-desc, .hero-subtitle, .project-lead, .featured-lead,
