@@ -3638,7 +3638,7 @@ body {
   .contact-list li { display: grid; grid-template-columns: 65px minmax(0, 1fr); gap: 10px; }
   .contact-list a, .contact-list span { text-align: right; font-size: 13px; }
   .contact-list .contact-email { grid-template-columns: minmax(0, 1fr); gap: 4px; }
-  .contact-list .contact-email a { text-align: left; }
+  .contact-list .contact-email a { text-align: right; }
   .profile-photo-wrapper-lg { width: 184px; height: 238px; margin-bottom: 18px; }
   .credentials-grid .edu-card { padding: 16px; }
   .credentials-grid .edu-item strong, .point-item-easy h4 { font-size: 15px; }
