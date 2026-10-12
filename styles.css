@@ -3973,9 +3973,10 @@ body {
   .contact-list a { overflow-wrap: anywhere; }
 }
 
-#profile .gpa-card-footer { text-align: center; }
+#profile .gpa-card-footer { justify-content: center; text-align: center; }
 #profile .gpa-tag-sub {
   display: block;
+  width: 100%;
   padding: 5px 8px;
   border: 1px solid #cbdcff;
   border-radius: var(--radius-md);
