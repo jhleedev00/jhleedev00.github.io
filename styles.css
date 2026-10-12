@@ -3973,6 +3973,16 @@ body {
   .contact-list a { overflow-wrap: anywhere; }
 }
 
+#profile .gpa-card-footer { text-align: center; }
+#profile .gpa-tag-sub {
+  display: block;
+  padding: 5px 8px;
+  border: 1px solid #cbdcff;
+  border-radius: var(--radius-md);
+  text-align: center;
+  line-height: 1.6;
+}
+
 /* Keep the original colored logo badges, enlarged and wrapped per viewport. */
 @media screen {
   #skills .td-cat { white-space: normal; width: 240px; }
