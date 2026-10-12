@@ -3933,3 +3933,41 @@ body {
   #proj-warehouse .featured-media-grid { min-height: 0; }
   #proj-warehouse .featured-photo-slot img { aspect-ratio: auto; }
 }
+
+/* Larger screen typography; print keeps its independently sized A4 layout. */
+@media screen {
+  body { font-size: 16px; }
+  .section-desc, .hero-subtitle, .project-lead, .featured-lead,
+  .exp-desc, .point-item-easy p, .case-point p,
+  .featured-detail-heading p { font-size: 16px; line-height: 1.7; }
+  .point-item-easy h4, .case-point h4, .featured-validation h4,
+  .edu-title { font-size: 18px; line-height: 1.5; }
+  .credentials-grid .edu-item strong { font-size: 16px; line-height: 1.5; }
+  .edu-sub, .edu-meta, .credentials-grid .edu-sub, .credentials-grid .edu-meta,
+  .media-caption, .featured-media figcaption, .contact-list,
+  .contact-list a, .contact-list span, .project-meta,
+  .project-role-badge, .featured-role, .featured-validation ul,
+  .docking-state-reference { font-size: 15px; line-height: 1.65; }
+  .featured-stat span, .featured-tags span, .tag, .skill-tag,
+  .gpa-badge, #profile .gpa-tag-sub, .docking-diagram figcaption,
+  .nav-dropdown-menu li a { font-size: 14px; }
+  .nav-link, .btn-github, .btn-print { font-size: 16px; }
+  .tech-stack-table td { font-size: 15px; }
+  .section-title, .profile-overview-header .section-title,
+  .project-title, .featured-title, .featured-detail-heading h3 { font-size: 28px; line-height: 1.4; }
+  #profile .hero-title { font-size: clamp(28px, 3vw, 36px); }
+  .profile-experience-title { font-size: 24px; }
+  .featured-stat strong { font-size: 20px; line-height: 1.3; overflow-wrap: normal; }
+  .featured-stat { flex-wrap: wrap; }
+  .project-role-badge { flex-wrap: wrap; }
+}
+
+@media screen and (max-width: 640px) {
+  .nav-link { font-size: 15px; }
+  .btn-github, .btn-print { font-size: 14px; }
+  .section-title, .project-title, .featured-title,
+  .featured-detail-heading h3 { font-size: 26px; }
+  .featured-stat-grid { gap: 10px; }
+  .featured-stat { align-items: flex-start; flex-direction: column; gap: 4px; }
+  .contact-list a { overflow-wrap: anywhere; }
+}
