@@ -4022,7 +4022,9 @@ body {
 @media print {
   #projects .youtube-print-card {
     display: grid !important;
-    grid-template-rows: minmax(0, 1fr) auto;
+    position: static;
+    inset: auto;
+    grid-template-rows: auto auto;
     border: 0.3mm solid #cbd5e1;
     border-radius: 3mm;
     background: #fff;
@@ -4036,20 +4038,50 @@ body {
     position: static;
     min-height: 0;
     width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
+    height: auto !important;
+    max-height: 56mm !important;
+    object-fit: contain !important;
     border-radius: 0;
   }
   #projects .youtube-print-card span {
     display: block;
-    padding: 2mm 2.5mm;
-    background: #eff6ff;
+    padding: 1mm 1.5mm;
+    background: #fff;
     color: #1e3a8a;
-    border-top: 0.3mm solid #bfdbfe;
-    font-size: 8pt;
-    line-height: 1.45;
+    border-top: 0;
+    font-size: 7pt;
+    font-weight: 500;
+    line-height: 1.3;
     text-align: center;
-    overflow-wrap: anywhere;
+    white-space: nowrap;
+    overflow-wrap: normal;
+    text-decoration: underline;
+    text-underline-offset: 0.5mm;
+  }
+  #projects .featured-media:not(.featured-media-wide) .youtube-print-card img {
+    max-height: 30mm !important;
+  }
+  /* Size video slots from the uncropped image, not the stretched page row. */
+  #projects .featured-video-slot,
+  #projects .media-box-modern > div[style*="padding-bottom"] {
+    flex: 0 0 auto;
+    height: auto !important;
+    padding-bottom: 0 !important;
+    aspect-ratio: auto;
+    background: #fff;
+  }
+  #projects .featured-media-grid-page1,
+  #projects .featured-media-grid-page2 {
+    grid-template-rows: auto auto;
+    align-content: start;
+    align-items: start;
+  }
+  #projects .media-box-modern:has(.youtube-print-card) {
+    align-self: start;
+  }
+  #projects .featured-photo-slot {
+    flex: 0 0 auto;
+    aspect-ratio: 16 / 9;
   }
 }
 
