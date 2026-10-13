@@ -3989,13 +3989,13 @@ body {
   transform-origin: center top;
 }
 @media screen {
-  #profile .profile-photo-wrapper-lg { width: min(260px, 100%); height: auto; }
+  #profile .profile-photo-wrapper-lg { width: min(284px, 100%); height: auto; }
 }
 @media screen and (max-width: 640px) {
   #profile .profile-photo-wrapper-lg { width: min(210px, 100%); }
 }
 @media print {
-  #profile .profile-photo-wrapper-lg { width: 48mm; height: 64mm; box-shadow: none; }
+  #profile .profile-photo-wrapper-lg { width: 52mm; height: calc(52mm * 4 / 3); box-shadow: none; }
 }
 
 #profile .gpa-card-footer {
