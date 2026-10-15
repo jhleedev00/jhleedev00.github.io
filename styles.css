@@ -4018,6 +4018,98 @@ body {
   #profile .gpa-tag-sub { font-size: 12px; line-height: 1.4; }
 }
 
+/* Align all project explanations and separate headings from body copy. */
+@media print {
+  #projects .case-point,
+  #projects .point-item-easy {
+    display: grid;
+    grid-template-columns: 5.5mm minmax(0, 1fr);
+    column-gap: 2.5mm !important;
+    align-items: start;
+    align-content: start;
+    text-align: left;
+  }
+  #projects .case-point > span,
+  #projects .point-item-easy > .point-num {
+    width: 5.5mm;
+    height: 5.5mm;
+    margin-top: 0;
+    align-self: start;
+  }
+  #projects .case-point > div,
+  #projects .point-item-easy > div:not(.point-num) { min-width: 0; }
+  #projects .case-point h4,
+  #projects .point-item-easy h4 {
+    margin: 0 0 3mm !important;
+    font-size: 9pt !important;
+    line-height: 1.45 !important;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    text-align: left;
+  }
+  #projects .case-point p,
+  #projects .point-item-easy p {
+    margin: 0;
+    font-size: 8.5pt !important;
+    line-height: 1.65 !important;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    text-align: left;
+    text-indent: 0;
+  }
+  #projects .case-point p + p,
+  #projects .point-item-easy p + p { margin-top: 1.5mm; }
+}
+
+/* Selected evidence photos replace video only in PDF/print. */
+.project-video-qr { display: none; }
+.print-media-caption { display: none; }
+@media print {
+  .print-media-caption { display: block !important; }
+  .screen-media-caption { display: none !important; }
+  #projects .project-topbar:has(.project-video-qr) {
+    position: relative;
+    padding-right: 29mm;
+    min-height: 8mm;
+  }
+  #projects .project-video-qr {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 24mm;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5mm;
+    color: #334155 !important;
+    background: #fff;
+    text-align: center;
+    text-decoration: none;
+    break-inside: avoid;
+  }
+  #projects .project-video-qr img {
+    display: block;
+    width: 22mm !important;
+    height: 22mm !important;
+    max-width: none;
+    max-height: none;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    object-fit: contain;
+  }
+  #projects .project-video-qr span {
+    font-size: 6.5pt;
+    line-height: 1.25;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  #projects .project-topbar:has(.project-video-qr) + .project-title,
+  #projects .project-topbar:has(.project-video-qr) + .project-title + .project-lead {
+    padding-right: 29mm;
+  }
+}
+
 /* Print-only video cards: photo and caption occupy separate bounded rows. */
 @media print {
   #projects .youtube-print-card {
@@ -4025,9 +4117,10 @@ body {
     position: static;
     inset: auto;
     grid-template-rows: auto auto;
-    border: 0.3mm solid #cbd5e1;
-    border-radius: 3mm;
-    background: #fff;
+    border: 0;
+    border-radius: 0;
+    overflow: visible;
+    background: transparent;
     color: #0f172a !important;
     text-decoration: none;
     break-inside: avoid;
@@ -4041,24 +4134,31 @@ body {
     height: auto !important;
     max-height: 56mm !important;
     object-fit: contain !important;
-    border-radius: 0;
+    border-radius: 2.5mm;
   }
-  #projects .youtube-print-card span {
+  #projects .youtube-print-card .video-link-label {
     display: block;
-    padding: 1mm 1.5mm;
-    background: #fff;
+    margin-top: 1mm;
+    padding: 1mm 0;
+    background: transparent;
     color: #1e3a8a;
-    border-top: 0;
-    font-size: 7pt;
-    font-weight: 500;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    font-family: inherit;
+    font-size: 8pt;
+    font-weight: 600;
     line-height: 1.3;
     text-align: center;
     white-space: nowrap;
     overflow-wrap: normal;
     text-decoration: underline;
-    text-underline-offset: 0.5mm;
+    text-decoration-color: #94a3b8;
+    text-decoration-thickness: 0.15mm;
+    text-underline-offset: 0.7mm;
   }
   #projects .featured-media:not(.featured-media-wide) .youtube-print-card img {
+    height: 30mm !important;
     max-height: 30mm !important;
   }
   /* Size video slots from the uncropped image, not the stretched page row. */
@@ -4110,4 +4210,47 @@ body {
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
   }
+}
+
+/* Readable A4 typography, independent of the desktop/mobile font scale. */
+@media print {
+  body { font-size: 10pt !important; line-height: 1.6; }
+  #profile .hero-title { font-size: 23pt !important; }
+  .section-title, #profile .profile-overview-header .section-title {
+    font-size: 17pt !important;
+    line-height: 1.35;
+  }
+  #projects .project-title, #projects .featured-title,
+  #projects .featured-detail-heading h3 { font-size: 20pt !important; line-height: 1.35; }
+  #projects .case-point h4, #projects .point-item-easy h4,
+  #profile .credentials-grid .edu-title, #profile .profile-experience-title {
+    font-size: 11.5pt !important;
+    line-height: 1.45 !important;
+  }
+  #projects .case-point p, #projects .point-item-easy p,
+  #projects .project-lead, #projects .featured-detail-heading p,
+  .section-desc, #profile .exp-desc,
+  #profile .credentials-grid .edu-item strong,
+  #profile .credentials-grid .edu-sub, #profile .credentials-grid .edu-meta,
+  #profile .contact-list, #profile .contact-list a, #profile .contact-list strong {
+    font-size: 10pt !important;
+    line-height: 1.6 !important;
+  }
+  #projects .media-caption, #projects .featured-media figcaption,
+  #projects .project-meta, #projects .project-role-badge,
+  #projects .project-role-badge strong, #projects .tag,
+  #projects .featured-validation, #projects .featured-validation ul,
+  #skills .tech-stack-table .td-cat, #skills .tech-stack-table .td-tech {
+    font-size: 9pt !important;
+    line-height: 1.5 !important;
+  }
+  #projects .youtube-print-card .video-link-label { font-size: 9pt; }
+  #projects .project-video-qr span, .featured-sheet-kicker { font-size: 7.5pt; }
+  #profile .gpa-tag-sub { font-size: 8pt !important; }
+  #profile .contact-list .contact-email {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.5mm;
+  }
+  #profile .contact-list .contact-email a { overflow-wrap: anywhere; text-align: right; }
 }
