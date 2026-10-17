@@ -4247,10 +4247,78 @@ body {
   #projects .youtube-print-card .video-link-label { font-size: 9pt; }
   #projects .project-video-qr span, .featured-sheet-kicker { font-size: 7.5pt; }
   #profile .gpa-tag-sub { font-size: 8pt !important; }
-  #profile .contact-list .contact-email {
+  #profile .contact-list li {
     display: grid;
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) !important;
     gap: 0.5mm;
   }
-  #profile .contact-list .contact-email a { overflow-wrap: anywhere; text-align: right; }
+  #profile .contact-list li > a { overflow-wrap: normal; text-align: right !important; white-space: nowrap; }
+}
+
+/* Keep badge identities, with quieter colors and concrete application examples. */
+#skills .badge-img { filter: saturate(0.5); }
+.project-bullets {
+  margin: 0;
+  padding-left: 1.1em;
+  list-style: disc outside;
+  color: var(--slate-600);
+  font-size: 16px;
+  line-height: 1.7;
+  text-align: left;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+.project-bullets li + li { margin-top: 0.45em; }
+.skills-applications { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--border); }
+.skills-applications > h3 { margin: 0 0 18px; color: var(--slate-800); font-size: 21px; letter-spacing: -0.03em; }
+.skills-application-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.skills-application {
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-top: 3px solid #a8bcd8;
+  border-radius: var(--radius-md);
+  background: var(--card-bg);
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.025);
+  min-width: 0;
+}
+.skills-application-heading { display: flex; align-items: center; gap: 10px; }
+.skills-application-index { display: grid; place-items: center; flex: 0 0 30px; height: 30px; border: 1px solid #dbe4f0; border-radius: 8px; background: #f1f5fa; color: #526e94; font-size: 12px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.skills-application h4 { margin: 0; color: var(--slate-800); font-size: 18px; line-height: 1.5; letter-spacing: -0.025em; }
+.skills-application-project { margin: 10px 0 14px; padding-bottom: 14px; border-bottom: 1px solid #edf1f6; color: var(--slate-500); font-size: 13px; }
+.skills-application ul { margin: 0; padding-left: 1.1em; color: var(--slate-600); font-size: 15px; line-height: 1.7; list-style: disc outside; }
+.skills-application li + li { margin-top: 6px; }
+.skills-application li::marker { color: #8195af; font-size: 0.8em; }
+/* Keep the complete PCB outline visible in both screen and print slots. */
+#projects #proj-balance .balance-pcb-media > img { object-fit: contain !important; background: #101e2c; }
+@media screen {
+  #profile .contact-list li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4px;
+  }
+  #profile .contact-list li > a { text-align: right; white-space: nowrap; }
+}
+@media screen and (max-width: 640px) {
+  .skills-application-grid { grid-template-columns: minmax(0, 1fr); }
+  .project-bullets { font-size: 14px; }
+}
+@media print {
+  #profile .gpa-card-footer { display: none !important; }
+  #profile .contact-list li { display: grid !important; }
+  #projects .youtube-print-card { grid-template-rows: auto; }
+  #projects .project-bullets {
+    font-size: 10pt !important;
+    line-height: 1.6 !important;
+  }
+  #projects .project-bullets li + li { margin-top: 1.5mm; }
+  #skills .skills-applications { margin-top: 7mm; padding-top: 5mm; break-inside: avoid; }
+  #skills .skills-applications > h3 { margin: 0 0 4mm; font-size: 12pt; }
+  #skills .skills-application-grid { gap: 4mm; }
+  #skills .skills-application { padding: 4mm; border-top-width: 0.6mm; box-shadow: none; break-inside: avoid; }
+  #skills .skills-application-heading { gap: 2mm; }
+  #skills .skills-application-index { flex-basis: 6mm; height: 6mm; border-radius: 1.5mm; font-size: 7pt; }
+  #skills .skills-application h4 { font-size: 10.5pt; }
+  #skills .skills-application-project { font-size: 8pt; margin: 2mm 0 3mm; padding-bottom: 2mm; }
+  #skills .skills-application ul { font-size: 9pt; line-height: 1.6; }
+  #skills .skills-application li + li { margin-top: 1.5mm; }
 }
