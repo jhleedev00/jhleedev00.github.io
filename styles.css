@@ -4327,12 +4327,17 @@ body {
 /* PDF-only density pass: retain the existing pages, media ratios and web layout. */
 .print-project-note { display: none; }
 @media print {
-  /* Remove the old dense-table reduction now that this page has useful content. */
-  #skills { zoom: 1; }
-  #skills .skills-application { padding: 5mm; }
-  #skills .skills-application-grid { gap: 5mm; }
-  #skills .skills-application ul { font-size: 10pt; line-height: 1.65; }
-  #skills .skills-application li + li { margin-top: 2mm; }
+  /* Keep the skills table and four application cards on the same A4 page. */
+  #skills { zoom: 1; break-inside: avoid-page; page-break-inside: avoid; }
+  #skills .tech-stack-table td { padding: 1.4mm 3mm !important; }
+  #skills .badge-img { height: 6mm; margin: 0.35mm 0.6mm 0.35mm 0; }
+  #skills .skills-applications { margin-top: 4mm; padding-top: 3mm; }
+  #skills .skills-applications > h3 { margin-bottom: 3mm; }
+  #skills .skills-application { padding: 4mm; }
+  #skills .skills-application-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4mm; }
+  #skills .skills-application-project { margin: 1.5mm 0 2mm; padding-bottom: 1.5mm; }
+  #skills .skills-application ul { font-size: 10pt; line-height: 1.6; }
+  #skills .skills-application li + li { margin-top: 1.2mm; }
 
   /* Intrinsic text rows prevent a longer bullet list from painting over its sibling. */
   #projects #proj-warehouse .featured-detail-points {
