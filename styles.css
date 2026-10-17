@@ -3508,7 +3508,8 @@ body {
   #proj-balance .point-item-easy,
   #proj-plc .point-item-easy {
     height: 100%;
-    align-items: center;
+    /* Keep the number beside the heading, not midway down the bullet list. */
+    align-items: flex-start;
   }
 
   #proj-vip .point-num,
@@ -3516,7 +3517,7 @@ body {
   #proj-guidedog .point-num,
   #proj-balance .point-num,
   #proj-plc .point-num {
-    margin-top: 0;
+    margin-top: 2px;
   }
 }
 
