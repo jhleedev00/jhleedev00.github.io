@@ -4426,3 +4426,17 @@ body {
     margin-bottom: 2mm !important;
   }
 }
+
+/* Keep individual media cards, but remove the empty frame around the whole column. */
+@media print {
+  #projects .project-media-col {
+    border: 0 !important;
+    border-radius: 0;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  #projects .project-media-col::before {
+    content: none;
+    display: none;
+  }
+}
