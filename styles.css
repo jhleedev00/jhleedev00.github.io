@@ -3204,6 +3204,8 @@ body {
 .featured-role {
   margin: 14px 0 22px;
   padding: 8px 14px;
+  justify-content: flex-start;
+  gap: 10px;
   border-left-width: 3px;
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
   font-size: 13px;
