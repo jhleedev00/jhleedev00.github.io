@@ -225,15 +225,15 @@
           </article>
           <article class="skills-application">
             <div class="skills-application-heading"><span class="skills-application-index" aria-hidden="true">02</span><h4>로봇 인식·정밀 제어</h4></div><p class="skills-application-project">LOGITLE · Guide Dog</p>
-            <ul><li>LiDAR·ICP 정합 및 이상값 필터링 적용</li><li>PID·Odometry 기반 도킹 방향 제어</li><li>UART 센서·모터 연동 및 정지·회피 흐름 검증</li></ul>
+            <ul><li>LiDAR·ICP 정합 및 이상값 필터링 적용</li><li>거리 PD·Odometry 기반 도킹 방향 제어</li><li>UART 센서·모터 연동 및 정지·회피 흐름 검증</li></ul>
           </article>
           <article class="skills-application">
             <div class="skills-application-heading"><span class="skills-application-index" aria-hidden="true">03</span><h4>Edge AI·병렬 처리</h4></div><p class="skills-application-project">VIP Wearable</p>
-            <ul><li>객체 탐지·지형 분할 모델 통합</li><li>공유 메모리 프레임 분배·프로세스 동기화</li><li>ROI 시간 필터 기반 안내 상태 전환 억제</li></ul>
+            <ul><li>YOLO 파인튜닝·ONNX INT8 배포 및 듀얼 AI 통합</li><li>Queue → SharedMemory 프레임 전달 구조 전환</li><li>1D Danger Map·ROI 시간 필터 기반 판단 안정화</li></ul>
           </article>
           <article class="skills-application">
             <div class="skills-application-heading"><span class="skills-application-index" aria-hidden="true">04</span><h4>산업 자동화·통합 디버깅</h4></div><p class="skills-application-project">PLC 자동화 설비</p>
-            <ul><li>BSFL 기반 층 선택·적재 램프 로직 구현</li><li>Tact Time 측정·평균 계산</li><li>중복 코일·레지스터 충돌·HMI 태그 오류 공동 해결</li></ul>
+            <ul><li>BSFL 기반 층 선택·적재 램프 로직 구현</li><li>Tact Time 측정·평균 계산</li><li>기능별 코일 번호 구분·통합 오류 공동 디버깅</li></ul>
           </article>
         </div>
       </div>
@@ -269,12 +269,12 @@
 
         <h3 class="project-title featured-title">AX Multi-Robot Logistics <span>(LOGITLE)</span></h3>
           <p class="project-lead featured-lead">
-            FMS 관제·AMR 운반·OMX 적재·하역을 연결한 주문 기반 물류 자동화 시스템
+            FMS 관제·AMR 운반·OMX 적재·하역 연계 · 24시간 무인 운영을 목표로 개발 중인 물류 자동화 시스템
           </p>
 
           <div class="tag-cloud" style="margin-bottom: 16px;">
             <span class="tag">ROS 2 Jazzy / Nav2</span>
-            <span class="tag">2D ICP / PID</span>
+            <span class="tag">2D ICP / 거리 PD</span>
             <span class="tag">LiDAR / Odometry</span>
             <span class="tag">Zenoh / MQTT</span>
             <span class="tag">LLM 경로 판단</span>
@@ -294,12 +294,12 @@
               <div class="case-point">
                 <span>2</span>
                 <div><h4>역할</h4>
-                  <ul class="project-bullets"><li>LiDAR·ICP 기반 충전 스테이션 정밀 도킹 구현</li><li>LLM 경로 판단 제안·모델 시험·평가 참여</li><li>프로젝트용 로컬 네트워크 구축·운영</li></ul>
+                  <ul class="project-bullets"><li>LiDAR·ICP 기반 충전 스테이션 정밀 도킹 구현</li><li>LLM 경로 판단 제안·모델 평가·KEV–FMS 연동 시험 참여</li><li>프로젝트용 로컬 네트워크 구축·운영</li></ul>
                 </div>
               </div>
               <div class="case-point">
                 <span>3</span>
-                <div><h4>LLM 경로 선택·시간 예약</h4><ul class="project-bullets"><li>LLM 인접 노드 선택·코드 기반 연결 검증</li><li>예약기로 노드·통로 통과 시간 조정</li><li>실제 점유 감지 시 정지 후 LLM 재호출</li></ul></div>
+                <div><h4>팀 경로 판단·예약 및 시뮬레이션</h4><ul class="project-bullets"><li>LLM 다음 노드 선택·코드 기반 간선 연결 검증</li><li>점유·예약 검사 후 주행, 차단 시 정지·LLM 재호출</li><li>FMS 3대 시뮬레이션 도착·대기 해제 테스트 통과</li></ul></div>
               </div>
             </div>
 
@@ -375,15 +375,15 @@
             <div class="featured-detail-points">
               <div class="case-point case-point-accent">
                 <span>1</span>
-                <div><h4>정합 품질·위치 변화량 기반 이상값 제거</h4><ul class="project-bullets"><li>LiDAR 점군 전처리·V자 도크 모델 ICP 정합</li><li>정합 품질·위치 변화량 기반 이상값 필터링</li><li>도킹 제어용 위치 추정</li></ul></div>
+                <div><h4>정합 품질·위치 변화량 기반 이상값 제거</h4><ul class="project-bullets"><li>LiDAR 점군 전처리·V자 도크 모델 ICP 정합</li><li>정합 품질·위치 변화량 기반 이상값 필터링</li><li>ROS 2 Action 취소·정합 실패 시 안전 정지 처리</li></ul></div>
               </div>
               <div class="case-point case-point-accent">
                 <span>2</span>
-                <div><h4>PID·상태 머신 제어</h4><ul class="project-bullets"><li>경유지 접근·각도 정렬 후 감속 후진</li><li>근거리 Odometry 기반 진행 방향 유지</li></ul></div>
+                <div><h4>거리 PD·횡오차 보정 및 상태 제어</h4><ul class="project-bullets"><li>경유지 접근·각도 정렬 후 정밀 후진</li><li>거리 PD·횡방향 오차 보정으로 후진 제어</li><li>근거리 ICP 종료·Odometry 기반 저속 후진·정지</li></ul></div>
               </div>
               <div class="case-point case-point-accent">
                 <span>3</span>
-                <div><h4>실패 처리·통합 안정화</h4><ul class="project-bullets"><li>FMS·OMX 연동 및 AMR 주행·정렬 보정 진행 중</li><li>LLM·A* 비교 검증 진행 중</li></ul></div>
+                <div><h4>주변 모서리 오인식 대응·검증 진행</h4><ul class="project-bullets"><li>3번 스테이션 주변 모서리의 도크 오인식 확인</li><li>도크 식별 특징·ROI·접근 전 경유지 정렬 보완 중</li><li>실기체 통합·LLM/A* 비교 검증 진행 중</li></ul></div>
               </div>
 
               <div class="featured-validation">
@@ -391,6 +391,7 @@
                 <span>코드상 완료 기준 1.5cm</span>
                 <span>제어 루프 설정 20Hz</span>
                 <span>실패 시 정지·재획득</span>
+                <span>FMS 시뮬레이션 ≠ 실기체 장시간 운용 검증</span>
               </div>
             </div>
 
@@ -456,7 +457,7 @@
 
         <div class="tag-cloud" style="margin-bottom: 16px;">
           <span class="tag">Raspberry Pi 5</span>
-          <span class="tag"> YOLO / ONNX</span>
+          <span class="tag"> YOLO / ONNX INT8</span>
           <span class="tag"> YOLO26n</span>
           <span class="tag"> OpenCV</span>
           <span class="tag"> Python Shared Memory</span>
@@ -465,7 +466,7 @@
 
         <div class="project-role-badge">
           <span>담당 역할</span>
-          <strong>Edge AI 담당 · YOLO 파인튜닝, 객체·지형 인식 병렬 처리, 공유 메모리 프레임 분배 및 이벤트 핸들러 구현</strong>
+          <strong>Edge AI 담당 · YOLO 파인튜닝·ONNX INT8 배포, OD·SEM 병렬 처리, SharedMemory 프레임 전달 및 판단 로직 구현</strong>
         </div>
 
         <div class="project-content-grid">
@@ -474,15 +475,15 @@
               <div class="point-num">1</div>
               <div>
                 <h4>객체 탐지·지형 인식 듀얼 AI 구성</h4>
-                <ul class="project-bullets"><li>YOLO 객체 탐지·차도·보도·횡단보도 분할 모델 통합</li><li>처리 속도 12 FPS 이상 — 개발완료보고서 기준</li></ul>
+                <ul class="project-bullets"><li>Raspberry Pi 5의 객체 검출(OD)·지형 분할(SEM) 통합</li><li>YOLO 직접 파인튜닝·ONNX INT8 최적화 및 배포</li><li>OD·SEM 독립 프로세스 분리·OpenCV 프레임 전처리</li></ul>
               </div>
             </div>
 
             <div class="point-item-easy">
               <div class="point-num">2</div>
               <div>
-                <h4>공유 메모리 기반 병렬 프레임 처리</h4>
-                <ul class="project-bullets"><li>공유 메모리 기반 카메라 프레임 분배·병렬 처리</li><li>상태 플래그로 AI 프로세스 동기화·처리 상태 관리</li></ul>
+                <h4>Queue → SharedMemory 구조 전환</h4>
+                <ul class="project-bullets"><li>공통 프레임 버퍼·Value 상태 플래그로 처리 시점 조정</li><li>전체 파이프라인 약 4 → 12+ FPS, 약 3배 이상 처리량</li><li>동일 모델·해상도·장비·실행 조건 비교 — 사용자 확인</li></ul>
               </div>
             </div>
 
@@ -490,7 +491,7 @@
               <div class="point-num">3</div>
               <div>
                 <h4>위험 구역·지형 이벤트 판단</h4>
-                <ul class="project-bullets"><li>장애물 위치·면적을 회피 방향에 연결</li><li>ROI 시간 필터로 안내 상태의 빈번한 전환 억제</li></ul>
+                <ul class="project-bullets"><li>객체 위치·면적비 누적 1D Danger Map·회피 방향 산출</li><li>3프레임 연속 방향 확인·4프레임 미감지 시 회피 해제</li><li>하단 ROI 지형 점유율·이력 필터로 상태 전환 안정화</li></ul>
               </div>
             </div>
           </div>
@@ -517,7 +518,7 @@
             <div class="media-box-modern">
               <img src="assets/vip-vision.png" alt="YOLO 기반 위험 객체 인식 결과">
               <div class="media-caption">
-                <strong>온디바이스 비전 검출:</strong> 장애물 위치를 5개 영역으로 분할 매핑하는 1D Danger Map 시각화
+                <strong>온디바이스 비전 검출:</strong> 객체 위치·면적비 기반 위험도 누적 및 1D Danger Map 시각화
               </div>
             </div>
           </div>
@@ -541,15 +542,15 @@
         </p>
 
         <div class="tag-cloud" style="margin-bottom: 16px;">
-          <span class="tag"> STM32 MCU</span>
+          <span class="tag"> STM32H523 / Bare-metal C</span>
           <span class="tag"> CAN / FDCAN</span>
-          <span class="tag"> C 언어 / C++</span>
-          <span class="tag"> Timer Input Capture</span>
+          <span class="tag"> UART RX 상태 머신</span>
+          <span class="tag"> Input Capture IRQ</span>
         </div>
 
         <div class="project-role-badge">
           <span>담당 역할</span>
-          <strong>Main Node 담당 · STM32H523 명령 파싱, 좌우 PWM 믹싱, CAN 상태 송수신 및 휠 속도 계측</strong>
+          <strong>STM32H523 Bare-metal Main Node 담당 · UART 패킷 검증, 차동 PWM, FDCAN 상태 공유·속도/전압 계측</strong>
         </div>
 
         <div class="project-content-grid">
@@ -557,16 +558,16 @@
             <div class="point-item-easy">
               <div class="point-num">1</div>
               <div>
-                <h4>메인 노드 통신·상태 처리</h4>
-                <ul class="project-bullets"><li>Bluetooth 명령 파싱·CAN 센서 상태 수신·공유</li><li>장애물 방향에 따른 모터 출력 제한</li></ul>
+                <h4>UART 수신 상태 머신·FDCAN 처리</h4>
+                <ul class="project-bullets"><li>팀원과 12바이트 규격 협의·0xAA/0xFF·XOR 검증 구현</li><li>Bluetooth 데이터 밀림 대응: DMA → 인터럽트 수신 전환</li><li>FDCAN RX IRQ·자체 원형 버퍼로 메인 루프 처리 분리</li></ul>
               </div>
             </div>
 
             <div class="point-item-easy">
               <div class="point-num">2</div>
               <div>
-                <h4>자연스러운 회전을 위한 차동 구동 믹싱</h4>
-                <ul class="project-bullets"><li>전후진·회전 입력을 차동 구동 명령으로 합성</li><li>좌우 바퀴 속도 독립 제어</li></ul>
+                <h4>차동 구동·CAN 하드웨어 디버깅</h4>
+                <ul class="project-bullets"><li>좌우 차동 PWM·장애물 방향별 출력 제한·ADC 전압 계측</li><li>간헐 CAN 오류 시 오실로스코프 파형·연결 상태 확인</li><li>CAN 접점 보완 후 노드 간 정상 통신 확인</li></ul>
               </div>
             </div>
 
@@ -574,7 +575,7 @@
               <div class="point-num">3</div>
               <div>
                 <h4>휠 펄스 노이즈 제외·무신호 타임아웃 처리</h4>
-                <ul class="project-bullets"><li>TIM2 Input Capture·DMA 기반 휠 펄스 계측</li><li>100 μs 미만 펄스 간격을 노이즈로 제외</li><li>500 ms 무신호 시 속도 초기화·이전 계측값 잔류 방지</li></ul>
+                <ul class="project-bullets"><li>낮은 펄스 빈도·복잡도 고려, TIM2 Input Capture IRQ 채택</li><li>100 μs 미만 펄스 간격을 노이즈로 제외</li><li>500 ms 무신호 시 속도 초기화·이전 계측값 잔류 방지</li></ul>
               </div>
             </div>
           </div>
@@ -640,8 +641,8 @@
             <div class="point-item-easy">
               <div class="point-num">1</div>
               <div>
-                <h4>STM32 실시간 센서·액추에이터 제어 계층 구현</h4>
-                <ul class="project-bullets"><li>Input Capture 기반 초음파 거리 계측·필터링</li><li>UART 거리값 송신·수신 명령의 모터 PWM 변환</li></ul>
+                <h4>STM32 센서 계측·모터 구동 계층 구현</h4>
+                <ul class="project-bullets"><li>HC-SR04 Input Capture 거리 계측·불안정 센서값 필터링</li><li>UART 거리값 송신·수신 명령의 모터 PWM 변환</li><li>카메라 인식 사각의 근거리 벽·장애물을 초음파로 보완</li></ul>
               </div>
             </div>
 
@@ -649,7 +650,7 @@
               <div class="point-num">2</div>
               <div>
                 <h4>팀 비전 모듈과 MCU 구동 계층 통합</h4>
-                <ul class="project-bullets"><li>팀 Raspberry Pi 회피 판단·MCU 명령 처리 연동</li><li>FREE·STOP·좌우 회전 흐름 통합 검증</li></ul>
+                <ul class="project-bullets"><li>Raspberry Pi 5 상위 판단 ↔ STM32 센서·구동 계층 분리</li><li>팀 YOLO·회피 판단과 UART FREE·STOP·회전 명령 연동</li><li>센서 입력 → 판단 → 모터 동작의 통합 흐름 검증</li></ul>
               </div>
             </div>
 
@@ -657,7 +658,7 @@
               <div class="point-num">3</div>
               <div>
                 <h4>실패 원인을 반영한 2륜 → 4륜 구조 전환</h4>
-                <ul class="project-bullets"><li>2륜 구조의 안정성 한계 분석</li><li>4륜 차동 구동으로 전환·통합 시연 완료</li></ul>
+                <ul class="project-bullets"><li>초기 2륜 구조의 안정성 한계 분석·팀 요구사항 조정</li><li>4륜 차동 구동 전환·하드웨어 통합 및 주행 시험</li><li>팀 객체 인식·손잡이 추종·정지/회피 통합 시연 완료</li></ul>
               </div>
             </div>
           </div>
@@ -726,15 +727,15 @@
               <div class="point-num">1</div>
               <div>
                 <h4>센서 융합 기반 기울기 추정 (1D 칼만 필터)</h4>
-                <ul class="project-bullets"><li>MPU6050 가속도·자이로의 1D 칼만 필터 융합</li><li>추정 기울기 → 균형 PID → 좌우 모터 PWM 연결</li></ul>
+                <ul class="project-bullets"><li>I2C/TWI 기반 MPU6050 초기화·측정값 보정</li><li>가속도 노이즈·자이로 드리프트 보완용 1D 칼만 융합</li><li>추정 기울기 → 균형 PID → 좌우 모터 PWM 연결</li></ul>
               </div>
             </div>
 
             <div class="point-item-easy">
               <div class="point-num">2</div>
               <div>
-                <h4>안정적인 기립을 위한 이중 PID 제어기</h4>
-                <ul class="project-bullets"><li>균형(Pitch)·회전(Yaw) PID 출력의 좌우 PWM 합성</li><li>자세 유지·조향 동시 제어</li></ul>
+                <h4>이중 PID·Bluetooth 원격 튜닝</h4>
+                <ul class="project-bullets"><li>균형(Pitch)·회전(Yaw) PID 출력의 좌우 PWM 합성</li><li>타이머 PWM·GPIO 방향 신호로 L298N 구동</li><li>HC-05 UART 명령 파싱·Android 앱 주행/게인 조정 연동</li></ul>
               </div>
             </div>
 
@@ -811,15 +812,15 @@
               <div class="point-num">1</div>
               <div>
                 <h4>자동 층 선택 및 적재 시퀀스 로직 구현</h4>
-                <ul class="project-bullets"><li>BSFL 비트 시프트 기반 창고 층 선택 로직 구현</li><li>적재 공간 상태에 따른 순차 적재·반복 동작 구성</li></ul>
+                <ul class="project-bullets"><li>BSFL 비트 시프트로 1~3층 적재 위치 순차 선택</li><li>적재 공간 여유에 따른 순환·재시작 로직 구성</li><li>흡착 OFF 시점과 층별 적재 상태 램프 연동</li></ul>
               </div>
             </div>
 
             <div class="point-item-easy">
               <div class="point-num">2</div>
               <div>
-                <h4>창고 적재 상태 램프 제어</h4>
-                <ul class="project-bullets"><li>1~3층 적재 램프 비트 시프트·순차 점등</li><li>흡착 OFF 시점과 연동한 적재 상태 표시</li></ul>
+                <h4>이중 코일 충돌·통합 오류 개선</h4>
+                <ul class="project-bullets"><li>2인 래더 코드 통합 시 동일 코일 번호 중복 문제 확인</li><li>기능별 사용 코일 번호 사전 구분·할당으로 충돌 해결</li><li>레지스터·HMI 태그 오류는 팀원과 공동 디버깅</li></ul>
               </div>
             </div>
 
@@ -827,7 +828,7 @@
               <div class="point-num">3</div>
               <div>
                 <h4>Tact Time 측정 및 평균 계산</h4>
-                <ul class="project-bullets"><li>동작 시간·횟수 집계 및 Tact Time 평균 계산</li><li>팀원과 중복 코일·레지스터 충돌·HMI 태그 오류 공동 해결</li></ul>
+                <ul class="project-bullets"><li>설비 시작~종료 시간·동작 횟수 집계</li><li>누적 시간·횟수 기반 Tact Time 평균 계산</li><li>연산용·표시용 레지스터 구분·HMI 데이터 연동</li></ul>
               </div>
             </div>
           </div>
