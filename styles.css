@@ -4045,7 +4045,7 @@ body {
     font-size: 9pt !important;
     line-height: 1.45 !important;
     word-break: keep-all;
-    overflow-wrap: break-word;
+    overflow-wrap: normal;
     text-align: left;
   }
   #projects .case-point p,
@@ -4054,7 +4054,7 @@ body {
     font-size: 8.5pt !important;
     line-height: 1.65 !important;
     word-break: keep-all;
-    overflow-wrap: break-word;
+    overflow-wrap: normal;
     text-align: left;
     text-indent: 0;
   }
@@ -4267,7 +4267,7 @@ body {
   line-height: 1.7;
   text-align: left;
   word-break: keep-all;
-  overflow-wrap: break-word;
+  overflow-wrap: normal;
 }
 .project-bullets li + li { margin-top: 0.45em; }
 .skills-applications { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--border); }
@@ -4391,4 +4391,36 @@ body {
     font-size: 8pt;
   }
   #projects #proj-warehouse .print-validation-note p { margin: 1.5mm 0 0; }
+}
+
+/* Keep Korean words and technical names intact; wrap at word boundaries. */
+#projects :is(h3, h4, p, li, figcaption, .project-role-badge, .tag, .media-caption),
+#skills :is(h3, h4, p, li),
+#profile .exp-desc {
+  word-break: keep-all;
+  overflow-wrap: normal;
+  hyphens: none;
+  white-space: normal;
+}
+#projects :is(.case-point, .point-item-easy) > div:not(.point-num) {
+  min-width: 0;
+}
+@media print {
+  #projects .points-list {
+    grid-template-rows: repeat(3, minmax(min-content, 1fr));
+  }
+  #projects .point-item-easy {
+    height: auto;
+    min-height: min-content;
+  }
+  /* Reclaim unused A4 space instead of squeezing words or reducing type size. */
+  #projects #proj-warehouse > .featured-sheet-detail {
+    height: 265mm;
+  }
+  #projects #proj-warehouse .featured-detail-points .case-point {
+    padding: 3mm;
+  }
+  #projects #proj-warehouse .featured-detail-points .case-point h4 {
+    margin-bottom: 2mm !important;
+  }
 }
