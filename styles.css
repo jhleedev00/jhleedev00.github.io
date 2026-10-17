@@ -4323,3 +4323,72 @@ body {
   #skills .skills-application ul { font-size: 9pt; line-height: 1.6; }
   #skills .skills-application li + li { margin-top: 1.5mm; }
 }
+
+/* PDF-only density pass: retain the existing pages, media ratios and web layout. */
+.print-project-note { display: none; }
+@media print {
+  /* Remove the old dense-table reduction now that this page has useful content. */
+  #skills { zoom: 1; }
+  #skills .skills-application { padding: 5mm; }
+  #skills .skills-application-grid { gap: 5mm; }
+  #skills .skills-application ul { font-size: 10pt; line-height: 1.65; }
+  #skills .skills-application li + li { margin-top: 2mm; }
+
+  /* Intrinsic text rows prevent a longer bullet list from painting over its sibling. */
+  #projects #proj-warehouse .featured-detail-points {
+    grid-template-rows: repeat(3, auto);
+    align-content: start;
+  }
+  #projects #proj-warehouse .featured-detail-points > .featured-validation {
+    display: none;
+  }
+  #projects #proj-warehouse .featured-media-grid-page1,
+  #projects #proj-warehouse .featured-media-grid-page2 {
+    grid-template-rows: auto auto auto;
+    align-content: start;
+    align-items: start;
+  }
+  #projects #proj-warehouse .print-project-note {
+    display: block;
+    grid-column: 1 / -1;
+    grid-row: 3;
+    margin: 2mm 0 0;
+    padding: 4mm;
+    border: 0.25mm solid var(--border-card);
+    border-left: 0.8mm solid var(--primary);
+    border-radius: 2mm;
+    background: #fff;
+    break-inside: avoid;
+    color: var(--slate-600);
+    font-size: 9pt;
+    line-height: 1.6;
+  }
+  #projects #proj-warehouse .print-project-note h4,
+  #projects #proj-warehouse .print-validation-note > strong {
+    display: block;
+    margin: 0 0 3mm;
+    color: var(--slate-800);
+    font-size: 10.5pt;
+    line-height: 1.4;
+  }
+  #projects #proj-warehouse .print-system-summary ul {
+    display: grid;
+    gap: 2.5mm;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  #projects #proj-warehouse .print-system-summary li {
+    display: grid;
+    grid-template-columns: 11mm minmax(0, 1fr);
+    gap: 2mm;
+  }
+  #projects #proj-warehouse .print-system-summary strong { color: var(--slate-800); }
+  #projects #proj-warehouse .print-validation-note > span {
+    display: inline-block;
+    margin: 0 1mm 1.5mm 0;
+    padding: 1mm 1.5mm;
+    font-size: 8pt;
+  }
+  #projects #proj-warehouse .print-validation-note p { margin: 1.5mm 0 0; }
+}
