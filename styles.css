@@ -4329,17 +4329,44 @@ body {
 /* PDF-only density pass: retain the existing pages, media ratios and web layout. */
 .print-project-note { display: none; }
 @media print {
-  /* Keep the skills table and four application cards on the same A4 page. */
-  #skills { zoom: 1; break-inside: avoid-page; page-break-inside: avoid; }
-  #skills .tech-stack-table td { padding: 1.4mm 3mm !important; }
-  #skills .badge-img { height: 6mm; margin: 0.35mm 0.6mm 0.35mm 0; }
-  #skills .skills-applications { margin-top: 4mm; padding-top: 3mm; }
-  #skills .skills-applications > h3 { margin-bottom: 3mm; }
-  #skills .skills-application { padding: 4mm; }
-  #skills .skills-application-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4mm; }
+  /* Keep the skills table and four application cards on the same A4 page with balanced distribution. */
+  #skills {
+    zoom: 1;
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+    height: 255mm;
+    min-height: 255mm;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #skills .tech-table-card { margin-bottom: 4mm !important; }
+  #skills .tech-stack-table td { padding: 2mm 3.5mm !important; }
+  #skills .badge-img { height: 6.6mm; margin: 0.35mm 0.7mm 0.35mm 0; }
+  #skills .skills-applications {
+    margin-top: 4mm;
+    padding-top: 3.5mm;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #skills .skills-applications > h3 { margin-bottom: 3mm; font-size: 12.5pt; }
+  #skills .skills-application-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4.5mm;
+    flex: 1 1 auto;
+  }
+  #skills .skills-application {
+    padding: 4.5mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
   #skills .skills-application-project { margin: 1.5mm 0 2mm; padding-bottom: 1.5mm; }
   #skills .skills-application ul { font-size: 10pt; line-height: 1.6; }
-  #skills .skills-application li + li { margin-top: 1.2mm; }
+  #skills .skills-application li + li { margin-top: 1.5mm; }
 
   /* Intrinsic text rows prevent a longer bullet list from painting over its sibling. */
   #projects #proj-warehouse .featured-detail-points {
@@ -4434,16 +4461,134 @@ body {
   }
 }
 
-/* Keep individual media cards, but remove the empty frame around the whole column. */
+/* Modern media cards in Projects 2~6: balanced cards, no large empty gap, clean vertical rhythm */
 @media print {
   #projects .project-media-col {
     border: 0 !important;
     border-radius: 0;
     background: transparent !important;
     box-shadow: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    gap: 4.5mm !important;
+    height: 100% !important;
+    min-height: 0 !important;
   }
   #projects .project-media-col::before {
-    content: none;
-    display: none;
+    content: none !important;
+    display: none !important;
+  }
+  #projects .project-media-col > .media-box-modern {
+    flex: 1 1 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 2.5mm !important;
+    border: 0.3mm solid #bfdbfe !important;
+    border-radius: 2.5mm !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+  }
+  #projects .project-media-col > .media-box-modern > div[style*="padding-bottom"] {
+    flex: 1 1 0 !important;
+    min-height: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: auto !important;
+    padding-bottom: 0 !important;
+    overflow: hidden !important;
+    background: #f8fafc !important;
+    border-radius: 1.5mm !important;
+  }
+  #projects .project-media-col > .media-box-modern > div[style*="padding-bottom"] .youtube-print-card {
+    display: flex !important;
+    width: 100% !important;
+    height: 100% !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+  }
+  #projects .project-media-col > .media-box-modern > div[style*="padding-bottom"] .youtube-print-card img {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    border-radius: 1.5mm !important;
+  }
+  #projects .project-media-col > .media-box-modern > img {
+    flex: 1 1 0 !important;
+    min-height: 0 !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    background: #f8fafc !important;
+    border-radius: 1.5mm !important;
+    padding: 1mm !important;
+    margin: 0 auto !important;
+  }
+  #projects #proj-balance .balance-pcb-media > img {
+    background: #0f172a !important;
+  }
+  #projects .project-media-col .media-caption {
+    flex: 0 0 auto !important;
+    margin-top: 2mm !important;
+    padding: 1.2mm 2mm !important;
+    font-size: 8.5pt !important;
+    line-height: 1.45 !important;
+    color: #334155 !important;
+    background: #f1f5f9 !important;
+    border-radius: 1.5mm !important;
+  }
+
+  /* Profile page: balance layout to gracefully occupy the page */
+  #profile.section {
+    height: 255mm;
+    min-height: 255mm;
+    box-sizing: border-box;
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+  }
+  #profile .hero-card {
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #profile .profile-grid {
+    flex: 1 1 auto;
+    align-items: stretch;
+  }
+  #profile .contact-list li {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 1.8mm 0 !important;
+    border-bottom: 0.25mm dashed #cbd5e1 !important;
+  }
+  #profile .contact-list li:last-child {
+    border-bottom: none !important;
+  }
+  #profile .contact-list strong {
+    font-size: 9.5pt !important;
+    color: #475569 !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+  }
+  #profile .contact-list a {
+    font-size: 9.5pt !important;
+    color: #1e293b !important;
+    font-weight: 600 !important;
+    text-align: right !important;
+    white-space: nowrap !important;
   }
 }
+
