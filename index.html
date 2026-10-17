@@ -221,7 +221,7 @@
         <div class="skills-application-grid">
           <article class="skills-application">
             <div class="skills-application-heading"><span class="skills-application-index" aria-hidden="true">01</span><h4>임베디드·회로 설계</h4></div><p class="skills-application-project">KICK-CAN · Balancing Robot</p>
-            <ul><li>조종 명령 해석과 좌우 모터 출력 조절, CAN 통신을 통한 차량 상태 공유</li><li>휠 펄스 노이즈 제외·무신호 타임아웃 처리</li><li>KiCad PCB 설계·제작 및 MCU·모터 드라이버 통합</li></ul>
+            <ul><li>조종 명령 해석과 좌우 모터 출력 조절, CAN 통신을 통한 차량 상태 공유</li><li>휠 엔코더 펄스 노이즈 제외·무신호 타임아웃 처리</li><li>KiCad PCB 설계·제작 및 MCU·모터 드라이버 통합</li></ul>
           </article>
           <article class="skills-application">
             <div class="skills-application-heading"><span class="skills-application-index" aria-hidden="true">02</span><h4>로봇 인식·정밀 제어</h4></div><p class="skills-application-project">LOGITLE · Guide Dog</p>
@@ -244,9 +244,6 @@
       <div class="section-header">
         <span class="eyebrow">PORTFOLIO WORK</span>
         <h2 class="section-title">주요 엔지니어링 프로젝트</h2>
-        <p class="section-desc">
-          회로·PCB 설계, MCU 제어, 로봇 통신, Edge AI 적용 프로젝트 · 담당 역할·시스템 연동·문제 해결 중심 구성 · 구현 완료와 검증 진행 중인 항목 구분
-        </p>
       </div>
 
       <!-- Project 1 -->
@@ -476,7 +473,6 @@
           <span class="tag"> YOLO26n</span>
           <span class="tag"> OpenCV</span>
           <span class="tag"> Python Shared Memory</span>
-          <span class="tag"> Raspberry Pi 햅틱 연동</span>
         </div>
 
         <div class="project-role-badge">
@@ -489,8 +485,8 @@
             <div class="point-item-easy">
               <div class="point-num">1</div>
               <div>
-                <h4>객체 탐지·지형 인식 듀얼 AI 구성</h4>
-                <ul class="project-bullets"><li>Raspberry Pi 5의 객체 검출(OD)·지형 분할(SEM) 통합</li><li>YOLO 직접 파인튜닝·ONNX INT8 최적화 및 배포</li><li>OD·SEM 독립 프로세스 분리·OpenCV 프레임 전처리</li></ul>
+                <h4>객체 인식·지형 인식 모델 구성</h4>
+                <ul class="project-bullets"><li>객체 인식·지형 인식 모델 통합</li><li>YOLO 직접 파인튜닝·ONNX INT8 최적화 및 배포</li><li>객체 인식·지형 인식 프로세스 분리</li></ul>
               </div>
             </div>
 
@@ -589,8 +585,8 @@
             <div class="point-item-easy">
               <div class="point-num">3</div>
               <div>
-                <h4>휠 펄스 노이즈 제외·무신호 타임아웃 처리</h4>
-                <ul class="project-bullets"><li>낮은 펄스 빈도·복잡도 고려, TIM2 Input Capture IRQ 채택</li><li>100 μs 미만 펄스 간격을 노이즈로 제외</li><li>500 ms 무신호 시 속도 초기화·이전 계측값 잔류 방지</li></ul>
+                <h4>휠 엔코더 펄스 노이즈 제외·무신호 타임아웃 처리</h4>
+                <ul class="project-bullets"><li>낮은 펄스 빈도·복잡도 고려, TIM2 Input Capture IRQ 채택</li><li>100 μs 미만 펄스 간격을 노이즈로 제외</li><li>500 ms 무신호 시 속도 초기화</li></ul>
               </div>
             </div>
           </div>
