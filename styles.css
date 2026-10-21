@@ -4368,21 +4368,22 @@ body {
   #skills .skills-application ul { font-size: 10pt; line-height: 1.6; }
   #skills .skills-application li + li { margin-top: 1.5mm; }
 
-  /* Intrinsic text rows prevent a longer bullet list from painting over its sibling. */
+  /* Match the other project pages: fixed gaps, with spare height inside cards. */
   #projects #proj-warehouse .featured-detail-points {
-    grid-template-rows: repeat(3, auto);
-    align-content: space-between;
+    grid-template-rows: repeat(3, minmax(min-content, 1fr));
+    align-content: stretch;
+    gap: 4mm;
   }
   #projects #proj-warehouse .featured-detail-points > .featured-validation {
     display: none;
   }
   #projects #proj-warehouse .featured-media-grid-page1,
   #projects #proj-warehouse .featured-media-grid-page2 {
-    grid-template-rows: auto auto auto;
-    /* Match the text column's top/bottom edges using gaps, not stretched images. */
+    grid-template-rows: minmax(min-content, 1.6fr) minmax(min-content, 1fr) auto;
     align-self: stretch;
-    align-content: space-between;
-    align-items: start;
+    align-content: stretch;
+    align-items: stretch;
+    gap: 4.5mm;
   }
   #projects #proj-warehouse .print-project-note {
     display: block;
@@ -4449,15 +4450,16 @@ body {
     height: auto;
     min-height: min-content;
   }
-  /* Let the longer overview card take its own height within the A4 frame. */
-  #projects #proj-warehouse > .featured-sheet-overview {
-    height: 265mm;
-    padding: 5mm !important;
+  /* Use the same A4 frame and inset as Projects 2–6 without zero-minimum rows. */
+  #projects #proj-warehouse > .featured-sheet-overview,
+  #projects #proj-warehouse > .featured-sheet-detail {
+    height: 255mm;
+    padding: 7mm !important;
   }
   #projects #proj-warehouse .featured-story-copy {
-    grid-template-rows: repeat(3, auto);
-    align-content: space-between;
-    gap: 3mm;
+    grid-template-rows: repeat(3, minmax(min-content, 1fr));
+    align-content: stretch;
+    gap: 4mm;
   }
   #projects #proj-warehouse .featured-story-copy .case-point {
     padding: 3mm;
@@ -4470,10 +4472,6 @@ body {
   }
   #projects #proj-warehouse .featured-story-copy .project-bullets li + li {
     margin-top: 1.2mm;
-  }
-  /* Reclaim unused A4 space instead of squeezing words or reducing type size. */
-  #projects #proj-warehouse > .featured-sheet-detail {
-    height: 265mm;
   }
   #projects #proj-warehouse .featured-detail-points .case-point {
     padding: 3mm;
