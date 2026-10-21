@@ -4449,6 +4449,28 @@ body {
     height: auto;
     min-height: min-content;
   }
+  /* Let the longer overview card take its own height within the A4 frame. */
+  #projects #proj-warehouse > .featured-sheet-overview {
+    height: 265mm;
+    padding: 5mm !important;
+  }
+  #projects #proj-warehouse .featured-story-copy {
+    grid-template-rows: repeat(3, auto);
+    align-content: space-between;
+    gap: 3mm;
+  }
+  #projects #proj-warehouse .featured-story-copy .case-point {
+    padding: 3mm;
+  }
+  #projects #proj-warehouse .featured-story-copy .case-point h4 {
+    margin-bottom: 2mm !important;
+  }
+  #projects #proj-warehouse .featured-story-copy .project-bullets {
+    line-height: 1.5 !important;
+  }
+  #projects #proj-warehouse .featured-story-copy .project-bullets li + li {
+    margin-top: 1.2mm;
+  }
   /* Reclaim unused A4 space instead of squeezing words or reducing type size. */
   #projects #proj-warehouse > .featured-sheet-detail {
     height: 265mm;
