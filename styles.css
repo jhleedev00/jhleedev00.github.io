@@ -4614,28 +4614,8 @@ body {
 
 /* ==========================================================================
    UI/UX Pro Max — Technical Clean & Modern Scannability Polish
-   High-contrast metric/keyword emphasis, interactive validation pills,
-   and diagram-safe media containment across screen and A4 print.
+   Diagram-safe media containment & balanced card heights across screen and A4 print.
    ========================================================================== */
-
-.project-bullets strong,
-.skills-application li strong,
-#profile .exp-desc strong {
-  color: var(--slate-900);
-  font-weight: 700;
-}
-
-.project-bullets code,
-.skills-application li code {
-  padding: 1px 5px;
-  border: 1px solid #dbeafe;
-  border-radius: 4px;
-  background: #eff6ff;
-  color: #1e40af;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 0.88em;
-  font-weight: 600;
-}
 
 .featured-validation a {
   display: inline-flex;
@@ -4662,13 +4642,6 @@ body {
 }
 
 @media screen {
-  .project-bullets strong,
-  .skills-application li strong {
-    background: linear-gradient(180deg, transparent 68%, rgba(37, 99, 235, 0.11) 68%);
-    padding: 0 1px;
-    border-radius: 2px;
-  }
-
   .skills-application,
   .point-item-easy,
   .case-point {
@@ -4682,6 +4655,26 @@ body {
     box-shadow: 0 10px 22px -10px rgba(29, 78, 216, 0.14);
   }
 
+  #proj-warehouse .featured-story-grid,
+  #proj-warehouse .featured-detail-grid {
+    align-items: start !important;
+  }
+
+  #proj-warehouse .featured-media-grid {
+    align-content: start !important;
+    align-items: start !important;
+    gap: 16px !important;
+  }
+
+  #proj-warehouse .featured-media {
+    height: auto !important;
+    align-self: start !important;
+  }
+
+  #proj-warehouse .featured-media figcaption {
+    flex: 0 0 auto !important;
+  }
+
   #projects #proj-guidedog .media-box-modern > img,
   #projects #proj-warehouse .featured-photo-slot img {
     object-fit: contain !important;
@@ -4690,28 +4683,84 @@ body {
 }
 
 @media print {
-  .project-bullets strong,
-  .skills-application li strong,
-  #profile .exp-desc strong {
-    color: #0f172a !important;
-    font-weight: 700 !important;
-    background: none !important;
-    padding: 0 !important;
+  #skills .tech-table-card {
+    flex-shrink: 0 !important;
   }
 
-  .project-bullets code,
-  .skills-application li code {
-    padding: 0 1mm;
-    border: 0.2mm solid #cbd5e1;
-    background: #f8fafc;
-    color: #1e3a8a;
-    font-size: 8.5pt;
+  #skills .tech-table th,
+  #skills .tech-table td {
+    padding: 2.2mm 3mm !important;
   }
 
-  #projects #proj-guidedog .media-box-modern > img {
+  #skills .skills-applications {
+    margin-top: 4mm !important;
+    gap: 3mm !important;
+    flex: 1 1 0 !important;
+    min-height: 0 !important;
+  }
+
+  #skills .skills-application {
+    padding: 3mm 3.5mm !important;
+  }
+
+  #skills .skills-application li {
+    font-size: 9.5pt !important;
+    line-height: 1.38 !important;
+    margin-bottom: 0.8mm !important;
+  }
+
+  #projects .featured-detail-points .project-bullets li,
+  #projects .points-list .project-bullets li {
+    font-size: 9.8pt !important;
+    line-height: 1.42 !important;
+    margin-bottom: 1mm !important;
+  }
+
+  #projects .featured-detail-points .case-point,
+  #projects .points-list .point-item-easy {
+    padding: 3mm 3.5mm !important;
+  }
+
+  #projects .featured-detail-points,
+  #projects .points-list {
+    gap: 3mm !important;
+  }
+
+  #projects #proj-warehouse .featured-media-grid-page1,
+  #projects #proj-warehouse .featured-media-grid-page2 {
+    grid-template-rows: auto auto auto !important;
+    align-content: space-between !important;
+    align-items: start !important;
+    gap: 3.5mm !important;
+  }
+
+  #projects #proj-warehouse .featured-media {
+    height: auto !important;
+    align-self: start !important;
+  }
+
+  #projects .featured-media:not(.featured-media-wide) .youtube-print-card img {
+    height: 34mm !important;
+    max-height: 34mm !important;
+    object-fit: cover !important;
+  }
+
+  #projects #proj-warehouse .featured-media-grid-page2 > .featured-media.featured-media-wide > img {
+    height: auto !important;
+    max-height: 44mm !important;
+    aspect-ratio: 16 / 9 !important;
+    object-fit: contain !important;
+    background: #ffffff !important;
+  }
+
+  #projects #proj-guidedog .project-media-col > .media-box-modern > img {
+    flex: 1 1 0 !important;
+    min-height: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: 100% !important;
+    aspect-ratio: auto !important;
     object-fit: contain !important;
     background: #ffffff !important;
   }
 }
-
-

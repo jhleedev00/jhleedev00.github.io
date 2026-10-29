@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#1d4ed8">
   <title>이정훈 | Embedded Systems & Hardware Control Engineer</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20261030-1">
+  <link rel="stylesheet" href="styles.css?v=20261030-2">
   <script src="app.js?v=20261011-2" defer></script>
 </head>
 <body id="page-top">
@@ -221,19 +221,19 @@
         <div class="skills-application-grid">
           <article class="skills-application">
             <div class="skills-application-heading"><span class="skills-application-index" aria-hidden="true">01</span><h4>임베디드·회로 설계</h4></div><p class="skills-application-project">KICK-CAN · Balancing Robot</p>
-            <ul><li><strong>12바이트 UART 상태 머신</strong>·차동 PWM 및 <strong>FDCAN 원형 큐</strong> 상태 공유 구현</li><li>휠 엔코더 <strong>100 μs 노이즈 제외·500 ms 타임아웃</strong> 처리</li><li><strong>KiCad 양면 PCB</strong> 설계·제작 및 MCU·모터 드라이버 단일 보드 통합</li></ul>
+            <ul><li>조종 명령 해석과 좌우 모터 출력 조절, CAN 통신을 통한 차량 상태 공유</li><li>휠 엔코더 펄스 노이즈 제외·무신호 타임아웃 처리</li><li>KiCad PCB 설계·제작 및 MCU·모터 드라이버 통합</li></ul>
           </article>
           <article class="skills-application">
             <div class="skills-application-heading"><span class="skills-application-index" aria-hidden="true">02</span><h4>로봇 인식·정밀 제어</h4></div><p class="skills-application-project">LOGITLE · Guide Dog</p>
-            <ul><li><strong>YOLO26n-pose 팔레트 8키포인트(Logistics_AX)</strong> 데이터·학습·배포 파이프라인 구축</li><li><strong>LiDAR·2D ICP</strong> 이상값 필터링 및 <strong>거리 PD·Odometry</strong> 후진 도킹 제어 구현</li><li><strong>RPi 5–STM32 UART</strong> 연동 및 초음파·비전 융합 정지·회피 흐름 검증</li></ul>
+            <ul><li>LiDAR·ICP 정합 및 이상값 필터링·거리 PD 후진 도킹 제어</li><li>YOLO26n-pose 팔레트 8키포인트 추정·데이터 파이프라인 구축</li><li>UART 센서·모터 연동 및 초음파·비전 정지·회피 흐름 검증</li></ul>
           </article>
           <article class="skills-application">
             <div class="skills-application-heading"><span class="skills-application-index" aria-hidden="true">03</span><h4>Edge AI·병렬 처리</h4></div><p class="skills-application-project">VIP Wearable · LOGITLE</p>
-            <ul><li><strong>YOLO 파인튜닝·ONNX INT8</strong> 배포 및 객체(OD)·지형(SEM) 병렬 추론 구성</li><li><strong>Queue → SharedMemory</strong> 전환으로 동일 조건 파이프라인 <strong>약 4 → 12+ FPS</strong> 달성</li><li><strong>결정 모델(KEV 0.8B)</strong> 단계별 경로 생성 및 <strong>1D Danger Map</strong> 판단 안정화</li></ul>
+            <ul><li>YOLO 파인튜닝·ONNX INT8 배포 및 듀얼 AI 통합</li><li>Queue → SharedMemory 프레임 전달 구조 전환(약 4 → 12+ FPS)</li><li>1D Danger Map·ROI 시간 필터 및 KEV 경로 판단 시험</li></ul>
           </article>
           <article class="skills-application">
             <div class="skills-application-heading"><span class="skills-application-index" aria-hidden="true">04</span><h4>산업 자동화·통합 디버깅</h4></div><p class="skills-application-project">PLC 자동화 설비</p>
-            <ul><li><strong>BSFL 비트 시프트</strong> 기반 1~3층 자동 선택·적재 램프 시퀀스 구현</li><li>설비 <strong>Tact Time 측정·평균 계산</strong> 및 연산·표시 레지스터 분리 적용</li><li><strong>기능별 코일 번호 사전 구분</strong>으로 이중 코일 충돌 방지 및 HMI 통합 디버깅</li></ul>
+            <ul><li>BSFL 기반 층 선택·적재 램프 로직 구현</li><li>Tact Time 측정·평균 계산 및 연산·표시 레지스터 분리</li><li>기능별 코일 번호 구분·통합 오류 공동 디버깅</li></ul>
           </article>
         </div>
       </div>
@@ -271,34 +271,33 @@
 
           <div class="tag-cloud" style="margin-bottom: 16px;">
             <span class="tag">ROS 2 Jazzy / Nav2</span>
-            <span class="tag">YOLO26n-pose (팔레트 8키포인트)</span>
+            <span class="tag">YOLO26n-pose (8-Keypoint)</span>
             <span class="tag">2D ICP / 거리 PD</span>
             <span class="tag">LiDAR / Odometry</span>
-            <span class="tag">결정 모델(KEV 0.8B) / MAPF</span>
             <span class="tag">Zenoh / MQTT</span>
-            <span class="tag">Hugging Face Hub</span>
+            <span class="tag">판단 모델(KEV)</span>
           </div>
 
           <div class="project-role-badge featured-role">
             <span>담당 역할</span>
-            <strong>프로젝트 기획 · 팔레트 8키포인트 비전(Logistics_AX) · 정밀 도킹 · KEV 경로 생성·FMS 예약 제어 · 네트워크 구축</strong>
+            <strong>프로젝트 기획 · 정밀 도킹 · 팔레트 8키포인트 추정 · KEV 경로 생성·FMS 예약 제어 · 네트워크 구축</strong>
           </div>
 
           <div class="featured-story-grid">
             <div class="featured-story-copy">
               <div class="case-point">
                 <span>1</span>
-                <div><h4>직접 기획한 물류 출고 자동화</h4><ul class="project-bullets"><li><strong>다중 AMR 경로 조율·로봇팔(OMX) 인계</strong> 프로젝트 기획</li><li>주문·배차 → 피킹·패킹 스테이션 도킹 → 컨베이어 하역 연계 설계</li></ul></div>
+                <div><h4>직접 기획한 물류 출고 자동화</h4><ul class="project-bullets"><li>다중 로봇 경로 조율·장비 간 인계 프로젝트 기획</li><li>주문·배차 → 피킹·패킹 이송 → 컨베이어 하역 연계</li></ul></div>
               </div>
               <div class="case-point">
                 <span>2</span>
-                <div><h4>비전 파이프라인(Logistics_AX) & 정밀 도킹</h4>
-                  <ul class="project-bullets"><li><strong>팔레트 8키포인트 추정(YOLO26n-pose)</strong> 데이터·학습·검증·HF 배포 단독 구축</li><li><strong>LiDAR·2D ICP</strong> 기반 충전 스테이션 정밀 도킹 구현</li><li>다중 장비 연동용 <strong>프로젝트 로컬 네트워크</strong> 구축·운영</li></ul>
+                <div><h4>핵심 구현 및 시스템 연동</h4>
+                  <ul class="project-bullets"><li>LiDAR·ICP 기반 충전 스테이션 정밀 도킹 구현</li><li>YOLO26n-pose 기반 팔레트 8키포인트 추정 구축·배포</li><li>현재·인접·목표 노드 기반 KEV 경로 생성 및 네트워크 구축</li></ul>
                 </div>
               </div>
               <div class="case-point">
                 <span>3</span>
-                <div><h4>KEV 경로 생성·다중 로봇 예약 제어</h4><ul class="project-bullets"><li>현재·인접·목표 노드 기반 <strong>KEV 단계별 경로 생성</strong> 및 대기·우회·유지 판단 시험</li><li><strong>FMS 구간 예약·우선순위</strong> 기반 진입·대기 제어 구현</li><li><strong>3대 로봇 시뮬레이션</strong> 배차·도착·대기 해제(구간 검사 498회) PASS 검증</li></ul></div>
+                <div><h4>KEV 경로 생성·다중 로봇 예약 제어</h4><ul class="project-bullets"><li>단계별 노드 선택·경로 리스트 구성, KEV 대기·우회·유지 판단 별도 시험</li><li>FMS 구간 예약·우선순위 기반 진입·대기 제어 구현</li><li>3대 로봇 시뮬레이션 배차·도착·대기 해제 검증</li></ul></div>
               </div>
             </div>
 
@@ -382,23 +381,22 @@
             <div class="featured-detail-points">
               <div class="case-point case-point-accent">
                 <span>1</span>
-                <div><h4>LiDAR·ICP 정합 및 이상값 필터링</h4><ul class="project-bullets"><li>LiDAR 스캔 전처리·<strong>V자 도크 모델 2D ICP</strong> 정합</li><li><strong>정합 품질·위치 변화량</strong> 기반 이상값 필터링</li><li><strong>ROS 2 Action</strong> 취소·정합 실패 시 안전 정지 처리</li></ul></div>
+                <div><h4>LiDAR·ICP 정합 및 이상값 필터링</h4><ul class="project-bullets"><li>LiDAR 스캔 전처리·V자 도크 모델 2D ICP 정합</li><li>정합 품질·위치 변화량 기반 이상값 필터링</li><li>ROS 2 Action 취소·정합 실패 시 안전 정지 처리</li></ul></div>
               </div>
               <div class="case-point case-point-accent">
                 <span>2</span>
-                <div><h4>거리 PD·횡오차 보정 및 오인식 대응</h4><ul class="project-bullets"><li>경유지 접근·각도 정렬 후 <strong>거리 PD·횡오차 보정</strong> 후진</li><li>근거리 ICP 종료·<strong>Odometry 저속 후진·정지</strong> 처리</li><li>3번 스테이션 모서리 오인식 보완(<strong>ROI·경유지 정렬</strong>)</li></ul></div>
+                <div><h4>거리 PD·횡오차 보정 및 오인식 대응</h4><ul class="project-bullets"><li>경유지 접근·각도 정렬 후 거리 PD·횡오차 보정 후진</li><li>근거리 ICP 종료·Odometry 저속 후진·정지 처리</li><li>3번 스테이션 모서리 오인식 보완(ROI·경유지 정렬)</li></ul></div>
               </div>
               <div class="case-point case-point-accent">
                 <span>3</span>
-                <div><h4>팔레트 8키포인트 추정 파이프라인</h4><ul class="project-bullets"><li><strong>Labelme JSON 155쌍</strong> 로더·가림 점(<code>v=0</code>) 손실 제외 구현</li><li><strong>YOLO26n-pose</strong> 검증 31장 <strong>Box mAP50 99.5% · Pose 91.5%</strong></li><li>오류 시각화·원자적 분할 및 <strong>HF(<code>v2026-10-29-155</code>) 배포</strong></li></ul></div>
+                <div><h4>팔레트 8키포인트 추정 파이프라인</h4><ul class="project-bullets"><li>Labelme JSON 155쌍 로더·가림 점(v=0) 손실 제외</li><li>YOLO26n-pose 검증 31장(Box 99.5%·Pose 91.5%)</li><li>오류 시각화·원자적 분할 및 HF(v2026-10-29-155) 배포</li></ul></div>
               </div>
 
               <div class="featured-validation">
                 <strong>구현 기준 · 검증 지표 구분</strong>
-                <span>도킹 기준 1.5cm · 20Hz(코드 설정)</span>
-                <span>Pose mAP 91.5%(검증 31장)</span>
-                <a href="https://github.com/jhleedev00/Logistics_AX" target="_blank" rel="noopener noreferrer">GitHub: Logistics_AX ↗</a>
-                <a href="https://huggingface.co/dl1wjd2/Logistics_AX" target="_blank" rel="noopener noreferrer">HF: v2026-10-29-155 ↗</a>
+                <span>코드 기준 1.5cm · 20Hz</span>
+                <span>검증 31장 Box 99.5% · Pose 91.5%</span>
+                <a href="https://huggingface.co/dl1wjd2/Logistics_AX" target="_blank" rel="noopener noreferrer">HF: Logistics_AX ↗</a>
               </div>
             </div>
 
@@ -436,10 +434,10 @@
               <figure class="featured-media featured-media-wide">
                 <div class="featured-photo-slot">
                   <!-- 사진 추가: 아래 img에 src="assets/파일명.jpg"를 입력하세요. -->
-                  <img alt="Logistics_AX 팔레트 8키포인트 검증 결과, 학습 곡선 및 팀 FMS 관제 화면" src="assets/logistics-ax-panel.png">
+                  <img alt="Logistics_AX 팔레트 8키포인트 검증 결과(2x2 확대) 및 YOLO26n-pose 학습·검증 지표" src="assets/logistics-ax-panel.png?v=20261030-2">
                   <div class="media-slot-empty"><strong>PHOTO 02</strong><code>src="assets/logistics-ax-panel.png"</code></div>
                 </div>
-                <figcaption>Logistics_AX 팔레트 8키포인트 추론 검증(좌상)·YOLO26n-pose 학습 지표(하) 및 팀 FMS 관제 화면(우상)</figcaption>
+                <figcaption>Logistics_AX 팔레트 8키포인트 추론 검증(2×2 확대) 및 YOLO26n-pose 학습·검증 지표</figcaption>
               </figure>
               <aside class="featured-validation print-project-note print-validation-note">
                 <strong>구현 기준 · 검증 범위</strong>
@@ -488,7 +486,7 @@
               <div class="point-num">1</div>
               <div>
                 <h4>객체 인식·지형 인식 모델 구성</h4>
-                <ul class="project-bullets"><li><strong>YOLO26n 직접 파인튜닝</strong>·<strong>ONNX INT8</strong> 최적화 및 배포</li><li>객체 인식(OD)·지형 세그멘테이션(SEM) 병렬 추론 구성</li><li>공통 프레임 버퍼를 참조하는 <strong>두 인식 프로세스</strong> 설계</li></ul>
+                <ul class="project-bullets"><li>YOLO26n 직접 파인튜닝·ONNX INT8 최적화 및 배포</li><li>객체 인식(OD)·지형 세그멘테이션(SEM) 병렬 추론 구성</li><li>공통 프레임 버퍼를 참조하는 두 인식 프로세스 설계</li></ul>
               </div>
             </div>
 
@@ -496,7 +494,7 @@
               <div class="point-num">2</div>
               <div>
                 <h4>Queue → SharedMemory 구조 전환</h4>
-                <ul class="project-bullets"><li><strong>SharedMemory + Value 상태 플래그</strong>로 프레임 접근 동기화</li><li>전체 파이프라인 <strong>약 4 → 12+ FPS(약 3배 이상)</strong> 처리량 확보</li><li>동일 모델·해상도·장비·실행 조건 비교 — 사용자 확인</li></ul>
+                <ul class="project-bullets"><li>SharedMemory + Value 상태 플래그로 프레임 접근 동기화</li><li>전체 파이프라인 약 4 → 12+ FPS(약 3배 이상) 처리량 확보</li><li>동일 모델·해상도·장비·실행 조건 비교 — 사용자 확인</li></ul>
               </div>
             </div>
 
@@ -504,7 +502,7 @@
               <div class="point-num">3</div>
               <div>
                 <h4>위험 구역·지형 이벤트 판단</h4>
-                <ul class="project-bullets"><li>객체 위치·면적비 누적 <strong>1D Danger Map</strong>·회피 방향 산출</li><li><strong>3프레임 연속</strong> 방향 확인·<strong>4프레임 미감지</strong> 시 회피 해제</li><li>하단 ROI 지형 점유율·이력 필터로 상태 전환 안정화</li></ul>
+                <ul class="project-bullets"><li>객체 위치·면적비 누적 1D Danger Map·회피 방향 산출</li><li>3프레임 연속 방향 확인·4프레임 미감지 시 회피 해제</li><li>하단 ROI 지형 점유율·이력 필터로 상태 전환 안정화</li></ul>
               </div>
             </div>
           </div>
@@ -572,7 +570,7 @@
               <div class="point-num">1</div>
               <div>
                 <h4>UART 수신 상태 머신·FDCAN 처리</h4>
-                <ul class="project-bullets"><li><strong>0xAA 탐색 → 12바이트 조립 → 0xFF·XOR 검증</strong> 상태 머신 구현</li><li>UART 데이터 밀림 대응: <strong>DMA → 인터럽트 수신 전환</strong>·정상 수신 확인</li><li>수신 인터럽트 <strong>원형 큐 적재</strong>·메인 루프 <strong>CAN 메시지</strong> 분리 처리</li></ul>
+                <ul class="project-bullets"><li>0xAA 탐색 → 12바이트 조립 → 0xFF·XOR 검증 상태 머신 구현</li><li>UART 데이터 밀림 대응: DMA → 인터럽트 수신 전환·정상 수신 확인</li><li>수신 인터럽트 원형 큐 적재·메인 루프 CAN 메시지 분리 처리</li></ul>
               </div>
             </div>
 
@@ -580,7 +578,7 @@
               <div class="point-num">2</div>
               <div>
                 <h4>차동 구동·CAN 하드웨어 디버깅</h4>
-                <ul class="project-bullets"><li>좌우 <strong>차동 PWM 구동</strong>·장애물 방향별 출력 제한·ADC 전압 계측</li><li>간헐 CAN 오류 시 <strong>오실로스코프 파형·연결 상태</strong> 계측 확인</li><li>트랜시버 <strong>CAN 접점 보완</strong> 후 노드 간 정상 통신 확인</li></ul>
+                <ul class="project-bullets"><li>좌우 차동 PWM 구동·장애물 방향별 출력 제한·ADC 전압 계측</li><li>간헐 CAN 오류 시 오실로스코프 파형·연결 상태 계측 확인</li><li>트랜시버 CAN 접점 보완 후 노드 간 정상 통신 확인</li></ul>
               </div>
             </div>
 
@@ -588,7 +586,7 @@
               <div class="point-num">3</div>
               <div>
                 <h4>휠 엔코더 펄스 노이즈 제외·무신호 타임아웃 처리</h4>
-                <ul class="project-bullets"><li>낮은 펄스 빈도·복잡도 고려, <strong>TIM2 Input Capture IRQ</strong> 채택</li><li><strong>100 μs 미만</strong> 채터링 펄스 간격을 노이즈로 제외 처리</li><li><strong>500 ms 무신호</strong> 타임아웃 시 속도 초기화 처리</li></ul>
+                <ul class="project-bullets"><li>낮은 펄스 빈도·복잡도 고려, TIM2 Input Capture IRQ 채택</li><li>100 μs 미만 채터링 펄스 간격을 노이즈로 제외 처리</li><li>500 ms 무신호 타임아웃 시 속도 초기화 처리</li></ul>
               </div>
             </div>
           </div>
@@ -655,7 +653,7 @@
               <div class="point-num">1</div>
               <div>
                 <h4>STM32 초음파 계측·모터 구동 구현</h4>
-                <ul class="project-bullets"><li><strong>TIM Input Capture</strong> 기반 3채널 HC-SR04 거리 계측·이상치 필터링</li><li><strong>수동(손잡이 추종)·자동(회피 우선)</strong> 모드별 차동 PWM 구동</li><li>전방 근접 임계치 이하 시 <strong>비상 정지</strong>로 카메라 사각 보완</li></ul>
+                <ul class="project-bullets"><li>TIM Input Capture 기반 3채널 HC-SR04 거리 계측·이상치 필터링</li><li>수동(손잡이 추종)·자동(회피 우선) 모드별 차동 PWM 구동</li><li>전방 근접 임계치 이하 시 비상 정지로 카메라 사각 보완</li></ul>
               </div>
             </div>
 
@@ -663,7 +661,7 @@
               <div class="point-num">2</div>
               <div>
                 <h4>팀 비전 모듈–MCU 연동·하드웨어 디버깅</h4>
-                <ul class="project-bullets"><li><strong>Raspberry Pi 5 상위 판단 ↔ STM32 센서·구동</strong> 계층 분리</li><li>팀 비전 판단의 <strong>FREE·STOP·회전 명령</strong> UART 수신·구동 연동</li><li><strong>오실로스코프 파형 계측</strong> 기반 센서·통신·PWM 하드웨어 디버깅</li></ul>
+                <ul class="project-bullets"><li>Raspberry Pi 5 상위 판단 ↔ STM32 센서·구동 계층 분리</li><li>팀 비전 판단의 FREE·STOP·회전 명령 UART 수신·구동 연동</li><li>오실로스코프 파형 계측 기반 센서·통신·PWM 하드웨어 디버깅</li></ul>
               </div>
             </div>
 
@@ -671,7 +669,7 @@
               <div class="point-num">3</div>
               <div>
                 <h4>실패 원인을 반영한 2륜 → 4륜 구조 전환</h4>
-                <ul class="project-bullets"><li>초기 <strong>2륜 밸런싱 구조</strong>의 보행 지지 안정성 한계 분석·일정 조정</li><li><strong>4륜 차동 구동 차체</strong>로 전환·하드웨어 통합 및 주행 시험</li><li>팀 객체 인식·손잡이 추종·<strong>정지/회피 상태 머신</strong> 통합 시연 완료</li></ul>
+                <ul class="project-bullets"><li>초기 2륜 밸런싱 구조의 보행 지지 안정성 한계 분석·일정 조정</li><li>4륜 차동 구동 차체로 전환·하드웨어 통합 및 주행 시험</li><li>팀 객체 인식·손잡이 추종·정지/회피 상태 머신 통합 시연 완료</li></ul>
               </div>
             </div>
           </div>
@@ -740,7 +738,7 @@
               <div class="point-num">1</div>
               <div>
                 <h4>센서 융합 기반 기울기 추정 (1D 칼만 필터)</h4>
-                <ul class="project-bullets"><li>I2C/TWI 기반 <strong>MPU6050 초기화</strong>·측정값 오프셋 보정</li><li>가속도 노이즈·자이로 드리프트 보완용 <strong>1D 칼만 필터</strong> 융합</li><li>추정 기울기 → <strong>균형 PID 제어기</strong> → 좌우 모터 PWM 연결</li></ul>
+                <ul class="project-bullets"><li>I2C/TWI 기반 MPU6050 초기화·측정값 오프셋 보정</li><li>가속도 노이즈·자이로 드리프트 보완용 1D 칼만 필터 융합</li><li>추정 기울기 → 균형 PID 제어기 → 좌우 모터 PWM 연결</li></ul>
               </div>
             </div>
 
@@ -748,7 +746,7 @@
               <div class="point-num">2</div>
               <div>
                 <h4>이중 PID·Bluetooth 원격 튜닝</h4>
-                <ul class="project-bullets"><li><strong>균형(Pitch)·회전(Yaw) 이중 PID</strong> 출력의 좌우 PWM 합성</li><li>타이머 하드웨어 PWM·GPIO 방향 신호로 <strong>L298N</strong> 구동</li><li>Android 앱의 주행 명령·<strong>PID 게인 조정값</strong>을 HC-05 UART로 수신</li></ul>
+                <ul class="project-bullets"><li>균형(Pitch)·회전(Yaw) 이중 PID 출력의 좌우 PWM 합성</li><li>타이머 하드웨어 PWM·GPIO 방향 신호로 L298N 구동</li><li>Android 앱의 주행 명령·PID 게인 조정값을 HC-05 UART로 수신</li></ul>
               </div>
             </div>
 
@@ -756,7 +754,7 @@
               <div class="point-num">3</div>
               <div>
                 <h4>모터 불감대 보정과 전용 PCB 자체 제작</h4>
-                <ul class="project-bullets"><li>작은 제어 입력에 반응하지 않는 <strong>모터 불감대(Deadzone) 오프셋</strong> 보정</li><li><strong>KiCad 전용 양면 PCB</strong> 회로 설계·아트워크 및 직접 제작</li><li>센서·MCU·모터 드라이버 <strong>단일 보드 구성</strong>으로 배선 단순화</li></ul>
+                <ul class="project-bullets"><li>작은 제어 입력에 반응하지 않는 모터 불감대(Deadzone) 오프셋 보정</li><li>KiCad 전용 양면 PCB 회로 설계·아트워크 및 직접 제작</li><li>센서·MCU·모터 드라이버 단일 보드 구성으로 배선 단순화</li></ul>
               </div>
             </div>
           </div>
@@ -825,7 +823,7 @@
               <div class="point-num">1</div>
               <div>
                 <h4>자동 층 선택 및 적재 시퀀스 로직 구현</h4>
-                <ul class="project-bullets"><li><strong>BSFL 비트 시프트</strong>로 1~3층 적재 위치 순차 선택 구현</li><li>적재 공간 여유에 따른 <strong>순환·재시작 시퀀스</strong> 로직 구성</li><li>흡착 OFF 시점과 <strong>층별 적재 상태 램프</strong> 출력 연동</li></ul>
+                <ul class="project-bullets"><li>BSFL 비트 시프트로 1~3층 적재 위치 순차 선택 구현</li><li>적재 공간 여유에 따른 순환·재시작 시퀀스 로직 구성</li><li>흡착 OFF 시점과 층별 적재 상태 램프 출력 연동</li></ul>
               </div>
             </div>
 
@@ -833,7 +831,7 @@
               <div class="point-num">2</div>
               <div>
                 <h4>이중 코일 충돌·통합 오류 개선</h4>
-                <ul class="project-bullets"><li>2인 래더 코드 통합 시 <strong>동일 코일 번호 중복 충돌</strong> 확인</li><li>기능별 <strong>코일 주소 사전 구분·할당</strong>으로 출력 충돌 해결</li><li>인접 레지스터 침범·<strong>HMI 태그 연결 오류</strong> 공동 디버깅</li></ul>
+                <ul class="project-bullets"><li>2인 래더 코드 통합 시 동일 코일 번호 중복 충돌 확인</li><li>기능별 코일 주소 사전 구분·할당으로 출력 충돌 해결</li><li>인접 레지스터 침범·HMI 태그 연결 오류 공동 디버깅</li></ul>
               </div>
             </div>
 
@@ -841,7 +839,7 @@
               <div class="point-num">3</div>
               <div>
                 <h4>Tact Time 측정 및 평균 계산</h4>
-                <ul class="project-bullets"><li>설비 시작~종료 시간·동작 횟수 측정 및 <strong>HMI 실시간 표시</strong></li><li>누적 시간·횟수 기반 <strong>Tact Time 평균 계산</strong> 로직 구현</li><li><strong>연산용·표시용 레지스터 분리</strong>로 데이터 겹침 방지</li></ul>
+                <ul class="project-bullets"><li>설비 시작~종료 시간·동작 횟수 측정 및 HMI 실시간 표시</li><li>누적 시간·횟수 기반 Tact Time 평균 계산 로직 구현</li><li>연산용·표시용 레지스터 분리로 데이터 겹침 방지</li></ul>
               </div>
             </div>
           </div>
