@@ -1,5 +1,17 @@
 # 내용·자료 출처 및 확인 범위
 
+## 2026-10-30 LOGITLE Logistics_AX·Guide Dog 발표자료 반영 및 UI/UX Pro Max 적용
+
+- `.agents/skills/`에 `ui-ux-pro-max-skill` 전체 스킬 세트(`ui-ux-pro-max`, `banner-design`, `brand`, `design`, `design-system`, `slides`, `ui-styling`)를 Antigravity 구조로 설치하고, 인사담당자 스캔 가독성을 높이는 `Technical Clean & Modern` 스타일(핵심 지표·기술 키워드 `strong` 하이라이트, 검증 링크 배지, 미세 카드 인터랙션)을 적용했습니다.
+- 기존 6개 프로젝트 체제(`LOGITLE`, `VIP Wearable`, `KICK-CAN`, `Guide Dog`, `Balancing Robot`, `PLC`)와 A4 9쪽 인쇄 구성을 유지했으며, 옵시디언 DB의 `STM32 Temperature Control System` 및 `LLM 위키`는 추가하지 않았습니다.
+- **LOGITLE (`#proj-warehouse`)**: 옵시디언 `프로젝트 경험 DB`의 2026-10-29 `Logistics_AX` 기록 및 사용자 제공 Canva 설계 자료 요약을 반영했습니다.
+  - `Logistics_AX` 팔레트 검출·8키포인트 추정 파이프라인(`YOLO26n-pose` 직접 파인튜닝, Labelme JSON 155쌍 직접 로더·가림 점 `v=0` 손실 제외·오류 사례 시각화·원자적 데이터 분할, 검증셋 31장 기준 Box mAP50 99.5%·Box mAP50-95 84.4%·Pose mAP50-95 91.5%, GitHub 및 Hugging Face `v2026-10-29-155` 배포)을 Sheet 1/2 및 기술 역량 적용 카드(`02`, `03`)에 반영했습니다.
+  - 옵시디언 폴더의 `검증이미지.png`(`assets/logistics-ax-val.png`)와 `학습그래프.png`(`assets/logistics-ax-metrics.png`)를 복사하고, 기존 `assets/logitle_FMS.png`와 결합한 복합 검증 패널(`assets/logistics-ax-panel.png`)을 Sheet 2 와이드 미디어 슬롯에 배치하여 A4 2쪽 레이아웃과 기존 팀 FMS 화면·YouTube 시연 영상 2개를 모두 보존했습니다.
+  - 도킹 완료 기준 `1.5cm·20Hz`(코드 설정값)와 `Logistics_AX` 검증 지표(검증셋 31장 기준, 실기체 통합 전 단계)를 실측 운용 성과와 명확히 구분했습니다.
+- **Guide Dog (`#proj-guidedog`)**: 사용자가 첨부한 `AI융합로봇_3기_결과보고서(4조).pdf`(25쪽 발표자료)의 아키텍처·제어 모드·시연 시각자료를 반영했습니다.
+  - 팀장으로서 수행한 STM32F411RE 3채널 초음파(`TIM Input Capture`) 계측·필터링, `MODE_MANUAL`(손잡이 추종)·`MODE_AUTO`(회피 우선) 차동 PWM 구동 및 전방 근접 비상 정지, RPi 5–STM32 UART 연동, 오실로스코프 파형 계측 기반 하드웨어 디버깅, 초기 2륜 밸런싱 한계 분석 후 4륜 차동 구동 전환을 구체화했습니다. RPi 5 상위 YOLO/PID 판단은 팀원 역할로 구분을 유지했습니다.
+  - 발표자료의 하드웨어 아키텍처 다이어그램(14쪽)과 4단계 장애물 회피 HUD(`FREE → STOP → TURN_RIGHT → FREE`, 20쪽)를 결합한 `assets/guidedog-system.png`를 하단 미디어 박스에 배치하고, 인쇄용 비디오 썸네일을 발표자료 19쪽의 16:9 실내 보행 시연 프레임(`assets/guidedog-demo-print.jpg`)으로 지정하여 PDF 인쇄 시 좌우 검은 여백 없이 표시되도록 개선했습니다(기존 `assets/guidedog-walk-demo.jpeg` 원본 파일은 보존).
+
 ## 2026-10-21 로컬 프로젝트 경험 DB 대조·기존 설명 보강
 
 - 사용자가 지정한 `프로젝트 경험 DB` 폴더의 목차·전체 속성과 현재 포트폴리오에 해당하는 6개 상세 문서를 읽었습니다. DB 원본은 수정하지 않았고, 기존 프로젝트 6개의 이름·순서·사진·영상·QR·배지·레이아웃을 유지했습니다. DB에만 있는 온도 제어 졸업작품은 추가하지 않았습니다.
